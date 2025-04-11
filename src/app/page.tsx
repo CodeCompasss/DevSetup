@@ -1,103 +1,175 @@
-import Image from "next/image";
+'use client';
+import { useState } from "react";
+import Image from "next/image"; // make sure this is at the top
+import toolsData, { OS, PkgManager } from "@/data/tool";
 
-export default function Home() {
+
+const osOptions: OS[] = ["windows", "macos", "linux"];
+const pkgManagers: Record<OS, PkgManager[]> = {
+  windows: ["choco", "winget", "scoop"],
+  macos: ["homebrew"],
+  linux: ["apt", "dnf", "pacman"]
+};
+
+
+
+export default function ScriptGenerator() {
+  const [selectedOS, setSelectedOS] = useState<OS>("windows");
+  const [selectedPkg, setSelectedPkg] = useState<PkgManager>("choco");
+  const [selectedTools, setSelectedTools] = useState<string[]>([]);
+
+  const handleToolSelect = (toolName: string) => {
+    setSelectedTools((prev) =>
+      prev.includes(toolName) ? prev.filter((t) => t !== toolName) : [...prev, toolName]
+    );
+  };
+
+  const generateScript = (): string => {
+    return toolsData
+      .flatMap((category) =>
+        category.tools
+          .filter((tool) => selectedTools.includes(tool.name) && tool.install[selectedPkg])
+          .map((tool) => tool.install[selectedPkg] as string)
+      )
+      .join("\n");
+  };
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(generateScript());
+      alert("Script copied to clipboard!");
+    } catch (err) {
+      alert("Failed to copy script: " + err);
+    }
+  };
+
+  const handleDownload = () => {
+    const script = generateScript();
+    const blob = new Blob([script], { type: "text/plain;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "install_script.sh";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="bg-[#0d1117] min-h-screen text-white font-sans">
+      <div className="max-w-screen mx-auto px-4 py-10">
+        <h1 className="text-4xl sm:text-6xl font-extrabold text-center mb-10 tracking-tight">
+          Dev Installer Script Generator
+        </h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        {/* OS Selector */}
+        <div className="flex flex-wrap gap-3 justify-center sm:justify-start mb-6">
+          {osOptions.map((os) => (
+            <button
+              key={os}
+              onClick={() => {
+                setSelectedOS(os);
+                setSelectedPkg(pkgManagers[os][0]);
+                setSelectedTools([]);
+              }}
+              className={`px-4 py-2 rounded-xl text-sm font-semibold transition duration-200 ${
+                selectedOS === os
+                  ? "bg-indigo-600 text-white shadow-lg"
+                  : "bg-gray-800 hover:bg-gray-700 text-gray-300"
+              }`}
+            >
+              {os.toUpperCase()}
+            </button>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+
+        {/* Package Manager Selector */}
+        <div className="flex flex-wrap gap-3 justify-center sm:justify-start mb-10">
+          {pkgManagers[selectedOS].map((pkg) => (
+            <button
+              key={pkg}
+              onClick={() => {
+                setSelectedPkg(pkg);
+                setSelectedTools([]);
+              }}
+              className={`px-4 py-2 rounded-xl text-sm font-semibold transition duration-200 ${
+                selectedPkg === pkg
+                  ? "bg-green-600 text-white shadow-lg"
+                  : "bg-gray-800 hover:bg-gray-700 text-gray-300"
+              }`}
+            >
+              {pkg}
+            </button>
+          ))}
+        </div>
+
+        {/* Tool Categories */}
+        {toolsData.map((group, i) => (
+          <div key={i} className="mb-10">
+            <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-1">
+              {group.category}
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-6">
+              {group.tools.map((tool, index) => {
+                const isAvailable = !!tool.install[selectedPkg];
+                return (
+                  <label
+                    key={index}
+                    className={`flex flex-col items-center bg-[#161b22] rounded-2xl p-4 transition cursor-pointer border border-transparent ${
+                      isAvailable
+                        ? "hover:shadow-xl hover:border-indigo-500"
+                        : "opacity-40 cursor-not-allowed"
+                    }`}
+                  >
+                    <input
+                      type="checkbox"
+                      disabled={!isAvailable}
+                      checked={selectedTools.includes(tool.name)}
+                      onChange={() => handleToolSelect(tool.name)}
+                      className="mb-3 w-5 h-5 accent-indigo-500"
+                    />
+                    <Image
+                      src={tool.iconsrc}
+                      alt={tool.name}
+                      width={40}
+                      height={40}
+                      className="object-contain mb-2"
+                    />
+                    <span className="text-sm text-center">{tool.name}</span>
+                  </label>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+
+        {/* Script Output */}
+        <div className="mt-12">
+          <h3 className="text-lg font-semibold mb-2">Generated Script:</h3>
+          <textarea
+            readOnly
+            value={generateScript()}
+            rows={6}
+            className="w-full bg-[#0d1117] text-gray-100 border border-gray-600 rounded-lg p-4 font-mono resize-none"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+
+        {/* Actions */}
+        <div className="mt-6 flex flex-wrap gap-4">
+          <button
+            onClick={handleCopy}
+            className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition"
+          >
+            Copy to Clipboard
+          </button>
+          <button
+            onClick={handleDownload}
+            className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl transition"
+          >
+            Download Script
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
