@@ -1,22 +1,95 @@
 'use client';
-import { useState } from "react";
-import Image from "next/image"; // make sure this is at the top
-import toolsData, { OS, PkgManager } from "@/data/tool";
 
+import { useEffect, useState } from "react";
+import * as XLSX from "xlsx";
+import Image from "next/image";
+
+type OS = "windows" | "macos" | "linux";
+type WindowsPkg = "choco" | "winget" | "scoop";
+type MacPkg = "homebrew";
+type LinuxPkg = "apt" | "dnf" | "pacman";
+type PkgManager = WindowsPkg | MacPkg | LinuxPkg;
+
+interface Tool {
+  name: string;
+  iconsrc: string;
+  install: Partial<Record<PkgManager, string>>;
+}
+
+interface ToolCategory {
+  category: string;
+  tools: Tool[];
+}
 
 const osOptions: OS[] = ["windows", "macos", "linux"];
 const pkgManagers: Record<OS, PkgManager[]> = {
   windows: ["choco", "winget", "scoop"],
   macos: ["homebrew"],
-  linux: ["apt", "dnf", "pacman"]
+  linux: ["apt", "dnf", "pacman"],
 };
 
-
-
 export default function ScriptGenerator() {
+  const [toolsData, setToolsData] = useState<ToolCategory[]>([]);
   const [selectedOS, setSelectedOS] = useState<OS>("windows");
   const [selectedPkg, setSelectedPkg] = useState<PkgManager>("choco");
   const [selectedTools, setSelectedTools] = useState<string[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  // Load and parse Excel on mount
+  useEffect(() => {
+    const fetchAndParse = async () => {
+      try {
+        const res = await fetch("/tools.xlsx");
+        const arrayBuffer = await res.arrayBuffer();
+        const workbook = XLSX.read(arrayBuffer, { type: "array" });
+
+        // Assuming sheet 1 contains your data in a suitable format.
+        const sheetName = workbook.SheetNames[0];
+        const worksheet = workbook.Sheets[sheetName];
+        // Parse sheet to JSON
+        const jsonData: any[] = XLSX.utils.sheet_to_json(worksheet, { defval: "" });
+
+        // Transform flat rows into structured ToolCategory[]
+        // Adjust this logic according to your Excel structure.
+        // Here is an example assuming columns: category, name, iconsrc, install_choco, install_apt, etc.
+
+        const categoriesMap: Record<string, ToolCategory> = {};
+
+        jsonData.forEach((row) => {
+          const category = row.category || "Uncategorized";
+
+          if (!categoriesMap[category]) {
+            categoriesMap[category] = { category, tools: [] };
+          }
+
+          const install: Partial<Record<PkgManager, string>> = {};
+
+          // Check all known package manager columns, adjust to your Excel headers
+          const pkgCols = ["choco", "winget", "scoop", "homebrew", "apt", "dnf", "pacman"];
+          pkgCols.forEach((pkg) => {
+            const colName = `install_${pkg}`;
+            if (row[colName]) {
+              install[pkg as PkgManager] = row[colName];
+            }
+          });
+
+          categoriesMap[category].tools.push({
+            name: row.name,
+            iconsrc: row.iconsrc,
+            install,
+          });
+        });
+
+        setToolsData(Object.values(categoriesMap));
+        setLoading(false);
+      } catch (error) {
+        console.error("Failed to load Excel data", error);
+        setLoading(false);
+      }
+    };
+
+    fetchAndParse();
+  }, []);
 
   const handleToolSelect = (toolName: string) => {
     setSelectedTools((prev) =>
@@ -54,6 +127,14 @@ export default function ScriptGenerator() {
     link.click();
     document.body.removeChild(link);
   };
+
+  if (loading) {
+    return (
+      <div className="text-white font-sans text-center mt-20">
+        Loading tools data...
+      </div>
+    );
+  }
 
   return (
     <div className="bg-[#0d1117] min-h-screen text-white font-sans">
@@ -128,13 +209,8 @@ export default function ScriptGenerator() {
                       onChange={() => handleToolSelect(tool.name)}
                       className="mb-3 w-5 h-5 accent-indigo-500"
                     />
-                    <Image
-                      src={tool.iconsrc}
-                      alt={tool.name}
-                      width={40}
-                      height={40}
-                      className="object-contain mb-2"
-                    />
+                    <img src={tool.iconsrc} alt={tool.name} width={40} height={40} />
+
                     <span className="text-sm text-center">{tool.name}</span>
                   </label>
                 );
