@@ -39,17 +39,20 @@ export default function ScriptGenerator() {
     const fetchAndParse = async () => {
       try {
         const res = await fetch("./tools.xlsx");
+        if (!res.ok) {
+          throw new Error('Failed to fetch Excel file');
+        }
+
         const arrayBuffer = await res.arrayBuffer();
         const workbook = XLSX.read(arrayBuffer, { type: "array" });
 
-        // Assuming sheet 1 contains your data in a suitable format.
         const sheetName = workbook.SheetNames[0];
         const worksheet = workbook.Sheets[sheetName];
-        // Define the expected row structure from the Excel sheet
+
         interface ExcelRow {
           category?: string;
           name: string;
-          iconsrc: string;z
+          iconsrc: string;
           choco?: string;
           winget?: string;
           scoop?: string;
@@ -58,7 +61,7 @@ export default function ScriptGenerator() {
           pacman?: string;
           homebrew?: string;
         }
-        // Parse sheet to JSON
+
         const jsonData: ExcelRow[] = XLSX.utils.sheet_to_json<ExcelRow>(worksheet, { defval: "" });
 
         const categoriesMap: Record<string, ToolCategory> = {};
@@ -72,7 +75,6 @@ export default function ScriptGenerator() {
 
           const install: Partial<Record<PkgManager, string>> = {};
 
-          // Explicitly check each package manager column
           if (row.choco) install["choco"] = row.choco;
           if (row.winget) install["winget"] = row.winget;
           if (row.scoop) install["scoop"] = row.scoop;
@@ -89,9 +91,10 @@ export default function ScriptGenerator() {
         });
 
         setToolsData(Object.values(categoriesMap));
-        setLoading(false);
       } catch (error) {
         console.error("Failed to load Excel data", error);
+        alert('Failed to load tool data. Please try again later.');
+      } finally {
         setLoading(false);
       }
     };
@@ -136,10 +139,12 @@ export default function ScriptGenerator() {
     document.body.removeChild(link);
   };
 
+  // Loading UI
   if (loading) {
     return (
       <div className="text-white font-sans text-center mt-20">
-        Loading tools data...
+        <div>Loading tools data...</div>
+        <div className="spinner">⏳</div> {/* Optionally add a spinner here */}
       </div>
     );
   }
