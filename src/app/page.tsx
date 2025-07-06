@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import * as XLSX from "xlsx";
-import Image from "next/image";
 
 type OS = "windows" | "macos" | "linux";
 type WindowsPkg = "choco" | "winget" | "scoop";
@@ -46,12 +45,21 @@ export default function ScriptGenerator() {
         // Assuming sheet 1 contains your data in a suitable format.
         const sheetName = workbook.SheetNames[0];
         const worksheet = workbook.Sheets[sheetName];
+        // Define the expected row structure from the Excel sheet
+        interface ExcelRow {
+          category?: string;
+          name: string;
+          iconsrc: string;z
+          choco?: string;
+          winget?: string;
+          scoop?: string;
+          apt?: string;
+          dnf?: string;
+          pacman?: string;
+          homebrew?: string;
+        }
         // Parse sheet to JSON
-        const jsonData: any[] = XLSX.utils.sheet_to_json(worksheet, { defval: "" });
-
-        // Transform flat rows into structured ToolCategory[]
-        // Adjust this logic according to your Excel structure.
-        // Here is an example assuming columns: category, name, iconsrc, install_choco, install_apt, etc.
+        const jsonData: ExcelRow[] = XLSX.utils.sheet_to_json<ExcelRow>(worksheet, { defval: "" });
 
         const categoriesMap: Record<string, ToolCategory> = {};
 
@@ -64,14 +72,14 @@ export default function ScriptGenerator() {
 
           const install: Partial<Record<PkgManager, string>> = {};
 
-          // Check all known package manager columns, adjust to your Excel headers
-          const pkgCols = ["choco", "winget", "scoop", "homebrew", "apt", "dnf", "pacman"];
-          pkgCols.forEach((pkg) => {
-            const colName = `install_${pkg}`;
-            if (row[colName]) {
-              install[pkg as PkgManager] = row[colName];
-            }
-          });
+          // Explicitly check each package manager column
+          if (row.choco) install["choco"] = row.choco;
+          if (row.winget) install["winget"] = row.winget;
+          if (row.scoop) install["scoop"] = row.scoop;
+          if (row.apt) install["apt"] = row.apt;
+          if (row.dnf) install["dnf"] = row.dnf;
+          if (row.pacman) install["pacman"] = row.pacman;
+          if (row.homebrew) install["homebrew"] = row.homebrew;
 
           categoriesMap[category].tools.push({
             name: row.name,
@@ -196,7 +204,7 @@ export default function ScriptGenerator() {
                 return (
                   <label
                     key={index}
-                    className={`flex flex-col items-center bg-[#161b22] rounded-2xl p-4 transition cursor-pointer border border-transparent ${
+                    className={`relative flex flex-col items-center justify-center bg-[#161b22] rounded-2xl p-4 transition cursor-pointer border border-transparent ${
                       isAvailable
                         ? "hover:shadow-xl hover:border-indigo-500"
                         : "opacity-40 cursor-not-allowed"
@@ -207,10 +215,8 @@ export default function ScriptGenerator() {
                       disabled={!isAvailable}
                       checked={selectedTools.includes(tool.name)}
                       onChange={() => handleToolSelect(tool.name)}
-                      className="mb-3 w-5 h-5 accent-indigo-500"
+                      className="absolute top-2 right-2 w-5 h-5 accent-indigo-500"
                     />
-                    <img src={tool.iconsrc} alt={tool.name} width={40} height={40} />
-
                     <span className="text-sm text-center">{tool.name}</span>
                   </label>
                 );
