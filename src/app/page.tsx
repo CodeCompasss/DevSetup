@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect, useState } from "react";
-import * as XLSX from "xlsx";
 
+// Define types
 type OS = "windows" | "macos" | "linux";
 type WindowsPkg = "choco" | "winget" | "scoop";
 type MacPkg = "homebrew";
@@ -34,65 +34,19 @@ export default function ScriptGenerator() {
   const [selectedTools, setSelectedTools] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // Load and parse Excel on mount
+  // Load and parse JSON data on mount
   useEffect(() => {
     const fetchAndParse = async () => {
       try {
-        const res = await fetch("./tools.xlsx");
+        const res = await fetch("/tools.json"); // Assuming the JSON file is hosted at /tools.json
         if (!res.ok) {
-          throw new Error('Failed to fetch Excel file');
+          throw new Error('Failed to fetch JSON file');
         }
 
-        const arrayBuffer = await res.arrayBuffer();
-        const workbook = XLSX.read(arrayBuffer, { type: "array" });
-
-        const sheetName = workbook.SheetNames[0];
-        const worksheet = workbook.Sheets[sheetName];
-
-        interface ExcelRow {
-          category?: string;
-          name: string;
-          iconsrc: string;
-          choco?: string;
-          winget?: string;
-          scoop?: string;
-          apt?: string;
-          dnf?: string;
-          pacman?: string;
-          homebrew?: string;
-        }
-
-        const jsonData: ExcelRow[] = XLSX.utils.sheet_to_json<ExcelRow>(worksheet, { defval: "" });
-
-        const categoriesMap: Record<string, ToolCategory> = {};
-
-        jsonData.forEach((row) => {
-          const category = row.category || "Uncategorized";
-
-          if (!categoriesMap[category]) {
-            categoriesMap[category] = { category, tools: [] };
-          }
-
-          const install: Partial<Record<PkgManager, string>> = {};
-
-          if (row.choco) install["choco"] = row.choco;
-          if (row.winget) install["winget"] = row.winget;
-          if (row.scoop) install["scoop"] = row.scoop;
-          if (row.apt) install["apt"] = row.apt;
-          if (row.dnf) install["dnf"] = row.dnf;
-          if (row.pacman) install["pacman"] = row.pacman;
-          if (row.homebrew) install["homebrew"] = row.homebrew;
-
-          categoriesMap[category].tools.push({
-            name: row.name,
-            iconsrc: row.iconsrc,
-            install,
-          });
-        });
-
-        setToolsData(Object.values(categoriesMap));
+        const data: ToolCategory[] = await res.json();
+        setToolsData(data);
       } catch (error) {
-        console.error("Failed to load Excel data", error);
+        console.error("Failed to load JSON data", error);
         alert('Failed to load tool data. Please try again later.');
       } finally {
         setLoading(false);

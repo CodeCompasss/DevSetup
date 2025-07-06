@@ -1,0 +1,1028 @@
+[
+  {
+    "category": "Programming Languages",
+    "tools": [
+      {
+        "name": "Python",
+        "install": {
+          "choco": "choco install python",
+          "winget": "winget install Python",
+          "scoop": "scoop install python",
+          "apt": "sudo apt install python3 -y",
+          "dnf": "sudo dnf install python3",
+          "pacman": "sudo pacman -S python",
+          "homebrew": "brew install python"
+        }
+      },
+      {
+        "name": "C",
+        "install": {
+          "choco": "choco install gcc",
+          "winget": "winget install gcc",
+          "scoop": "scoop install gcc",
+          "apt": "sudo apt install build-essential",
+          "dnf": "sudo dnf install gcc",
+          "pacman": "sudo pacman -S gcc",
+          "homebrew": "brew install gcc"
+        }
+      },
+      {
+        "name": "C++",
+        "install": {
+          "choco": "choco install gcc",
+          "winget": "winget install gcc",
+          "scoop": "scoop install gcc",
+          "apt": "sudo apt install g++ -y",
+          "dnf": "sudo dnf install gcc-c++",
+          "pacman": "sudo pacman -S gcc",
+          "homebrew": "brew install gcc"
+        }
+      },
+      {
+        "name": "Rust",
+        "install": {
+          "choco": "choco install rust",
+          "winget": "winget install rust",
+          "scoop": "scoop install rust",
+          "apt": "sudo apt install rustc -y",
+          "dnf": "sudo dnf install rust",
+          "pacman": "sudo pacman -S rust",
+          "homebrew": "brew install rust"
+        }
+      },
+      {
+        "name": "Go",
+        "install": {
+          "choco": "choco install golang",
+          "winget": "winget install golang",
+          "scoop": "scoop install golang",
+          "apt": "sudo apt install golang -y",
+          "dnf": "sudo dnf install golang",
+          "pacman": "sudo pacman -S go",
+          "homebrew": "brew install go"
+        }
+      },
+      {
+        "name": "Java",
+        "install": {
+          "choco": "choco install openjdk",
+          "winget": "winget install openjdk",
+          "scoop": "scoop install openjdk",
+          "apt": "sudo apt install openjdk-11-jdk",
+          "dnf": "sudo dnf install java-11-openjdk",
+          "pacman": "sudo pacman -S jdk-openjdk",
+          "homebrew": "brew install openjdk"
+        }
+      },
+      {
+        "name": "Kotlin",
+        "install": {
+          "choco": "choco install kotlin",
+          "winget": "winget install kotlin",
+          "scoop": "scoop install kotlin",
+          "apt": "sudo apt install kotlin",
+          "dnf": "sudo dnf install kotlin",
+          "pacman": "sudo pacman -S kotlin",
+          "homebrew": "brew install kotlin"
+        }
+      },
+      {
+        "name": "Solidity",
+        "install": {
+          "homebrew": "brew install solidity"
+        }
+      },
+      {
+        "name": "R",
+        "install": {
+          "choco": "choco install r",
+          "winget": "winget install r",
+          "scoop": "scoop install r",
+          "apt": "sudo apt install r-base",
+          "dnf": "sudo dnf install R",
+          "pacman": "sudo pacman -S r",
+          "homebrew": "brew install r"
+        }
+      },
+      {
+        "name": "Ruby",
+        "install": {
+          "choco": "choco install ruby",
+          "winget": "winget install ruby",
+          "scoop": "scoop install ruby",
+          "apt": "sudo apt install ruby",
+          "dnf": "sudo dnf install ruby",
+          "pacman": "sudo pacman -S ruby",
+          "homebrew": "brew install ruby"
+        }
+      },
+      {
+        "name": "Perl",
+        "install": {
+          "choco": "choco install perl",
+          "winget": "winget install perl",
+          "scoop": "scoop install perl",
+          "apt": "sudo apt install perl",
+          "dnf": "sudo dnf install perl",
+          "pacman": "sudo pacman -S perl",
+          "homebrew": "brew install perl"
+        }
+      },
+      {
+        "name": "Lua",
+        "install": {
+          "choco": "choco install lua",
+          "winget": "winget install lua",
+          "scoop": "scoop install lua",
+          "apt": "sudo apt install lua5.3",
+          "dnf": "sudo dnf install lua",
+          "pacman": "sudo pacman -S lua",
+          "homebrew": "brew install lua"
+        }
+      },
+      {
+        "name": "Haskell",
+        "install": {
+          "choco": "choco install haskell",
+          "winget": "winget install haskell",
+          "scoop": "scoop install haskell",
+          "apt": "sudo apt install haskell-platform",
+          "dnf": "sudo dnf install ghc",
+          "pacman": "sudo pacman -S ghc",
+          "homebrew": "brew install haskell"
+        }
+      },
+      {
+        "name": "Swift",
+        "install": {
+          "homebrew": "brew install swift"
+        }
+      },
+      {
+        "name": "TypeScript",
+        "install": {
+          "choco": "choco install typescript",
+          "winget": "winget install typescript",
+          "scoop": "scoop install typescript",
+          "apt": "sudo apt install typescript",
+          "homebrew": "brew install typescript"
+        }
+      },
+      {
+        "name": "Dart",
+        "install": {
+          "choco": "choco install dart-sdk",
+          "winget": "winget install dart-sdk",
+          "scoop": "scoop install dart-sdk",
+          "apt": "sudo apt install dart",
+          "dnf": "sudo dnf install dart",
+          "pacman": "sudo pacman -S dart",
+          "homebrew": "brew install dart"
+        }
+      },
+      {
+        "name": "Node.js",
+        "install": {
+          "choco": "choco install nodejs",
+          "winget": "winget install nodejs",
+          "scoop": "scoop install nodejs",
+          "apt": "sudo apt install nodejs -y",
+          "dnf": "sudo dnf install nodejs",
+          "pacman": "sudo pacman -S nodejs",
+          "homebrew": "brew install node"
+        }
+      }
+    ]
+  },
+  {
+    "category": "Database",
+    "tools": [
+      {
+        "name": "PostgreSQL",
+        "install": {
+          "choco": "choco install postgresql",
+          "winget": "winget install postgresql",
+          "scoop": "scoop install postgresql",
+          "apt": "sudo apt install postgresql",
+          "dnf": "sudo dnf install postgresql",
+          "pacman": "sudo pacman -S postgresql",
+          "homebrew": "brew install postgresql"
+        }
+      },
+      {
+        "name": "MySQL",
+        "install": {
+          "choco": "choco install mysql",
+          "winget": "winget install mysql",
+          "scoop": "scoop install mysql",
+          "apt": "sudo apt install mysql-server",
+          "dnf": "sudo dnf install mysql-server",
+          "pacman": "sudo pacman -S mysql",
+          "homebrew": "brew install mysql"
+        }
+      },
+      {
+        "name": "SQLite",
+        "install": {
+          "choco": "choco install sqlite",
+          "winget": "winget install sqlite",
+          "scoop": "scoop install sqlite",
+          "apt": "sudo apt install sqlite3",
+          "dnf": "sudo dnf install sqlite",
+          "pacman": "sudo pacman -S sqlite",
+          "homebrew": "brew install sqlite"
+        }
+      },
+      {
+        "name": "MongoDB",
+        "install": {
+          "choco": "choco install mongodb",
+          "winget": "winget install mongodb",
+          "scoop": "scoop install mongodb",
+          "apt": "sudo apt install mongodb",
+          "dnf": "sudo dnf install mongodb",
+          "pacman": "sudo pacman -S mongodb",
+          "homebrew": "brew install mongodb"
+        }
+      },
+      {
+        "name": "Redis",
+        "install": {
+          "choco": "choco install redis",
+          "winget": "winget install redis",
+          "scoop": "scoop install redis",
+          "apt": "sudo apt install redis-server",
+          "dnf": "sudo dnf install redis",
+          "pacman": "sudo pacman -S redis",
+          "homebrew": "brew install redis"
+        }
+      },
+      {
+        "name": "MariaDB",
+        "install": {
+          "choco": "choco install mariadb",
+          "winget": "winget install mariadb",
+          "scoop": "scoop install mariadb",
+          "apt": "sudo apt install mariadb-server",
+          "dnf": "sudo dnf install mariadb",
+          "pacman": "sudo pacman -S mariadb",
+          "homebrew": "brew install mariadb"
+        }
+      },
+      {
+        "name": "Elasticsearch",
+        "install": {
+          "choco": "choco install elasticsearch",
+          "winget": "winget install elasticsearch",
+          "scoop": "scoop install elasticsearch",
+          "apt": "sudo apt install elasticsearch",
+          "dnf": "sudo dnf install elasticsearch",
+          "pacman": "sudo pacman -S elasticsearch",
+          "homebrew": "brew install elasticsearch"
+        }
+      }
+    ]
+  },
+  {
+    "category": "Browser",
+    "tools": [
+      {
+        "name": "Chrome",
+        "install": {
+          "choco": "choco install googlechrome",
+          "winget": "winget install googlechrome",
+          "scoop": "scoop install googlechrome",
+          "apt": "sudo apt install google-chrome-stable",
+          "dnf": "sudo dnf install google-chrome-stable",
+          "pacman": "sudo pacman -S google-chrome",
+          "homebrew": "brew install --cask google-chrome"
+        }
+      },
+      {
+        "name": "Chromium",
+        "install": {
+          "choco": "choco install chromium",
+          "winget": "winget install chromium",
+          "scoop": "scoop install chromium",
+          "apt": "sudo apt install chromium-browser",
+          "dnf": "sudo dnf install chromium",
+          "pacman": "sudo pacman -S chromium",
+          "homebrew": "brew install chromium"
+        }
+      },
+      {
+        "name": "Firefox",
+        "install": {
+          "choco": "choco install firefox",
+          "winget": "winget install firefox",
+          "scoop": "scoop install firefox",
+          "apt": "sudo apt install firefox",
+          "dnf": "sudo dnf install firefox",
+          "pacman": "sudo pacman -S firefox",
+          "homebrew": "brew install firefox"
+        }
+      },
+      {
+        "name": "Edge",
+        "install": {
+          "choco": "choco install microsoft-edge",
+          "winget": "winget install microsoft-edge",
+          "scoop": "scoop install microsoft-edge",
+          "apt": "sudo apt install microsoft-edge",
+          "dnf": "sudo dnf install microsoft-edge",
+          "pacman": "sudo pacman -S microsoft-edge",
+          "homebrew": "brew install --cask microsoft-edge"
+        }
+      },
+      {
+        "name": "Brave",
+        "install": {
+          "choco": "choco install brave",
+          "winget": "winget install brave",
+          "scoop": "scoop install brave",
+          "apt": "sudo apt install brave-browser",
+          "dnf": "sudo dnf install brave-browser",
+          "pacman": "sudo pacman -S brave",
+          "homebrew": "brew install brave-browser"
+        }
+      }
+    ]
+  },
+  {
+    "category": "Cybersecurity",
+    "tools": [
+      {
+        "name": "OWASP ZAP",
+        "install": {
+          "choco": "choco install owasp-zap",
+          "winget": "winget install owasp-zap",
+          "scoop": "scoop install zap",
+          "apt": "sudo apt install zaproxy",
+          "dnf": "sudo dnf install zaproxy",
+          "pacman": "sudo pacman -S zaproxy",
+          "homebrew": "brew install owasp-zap"
+        }
+      },
+      {
+        "name": "Burp Suite",
+        "install": {
+          "choco": "choco install burpsuite",
+          "winget": "winget install burpsuite",
+          "scoop": "scoop install burpsuite",
+          "apt": "sudo apt install burpsuite",
+          "dnf": "sudo dnf install burpsuite",
+          "pacman": "sudo pacman -S burpsuite",
+          "homebrew": "brew install burp-suite"
+        }
+      },
+      {
+        "name": "Nikto",
+        "install": {
+          "choco": "choco install nikto",
+          "winget": "winget install nikto",
+          "scoop": "scoop install nikto",
+          "apt": "sudo apt install nikto",
+          "dnf": "sudo dnf install nikto",
+          "pacman": "sudo pacman -S nikto",
+          "homebrew": "brew install nikto"
+        }
+      },
+      {
+        "name": "Acunetix",
+        "install": {
+          "choco": "choco install acunetix",
+          "homebrew": "brew install acunetix"
+        }
+      },
+      {
+        "name": "Metasploit",
+        "install": {
+          "choco": "choco install metasploit",
+          "winget": "winget install metasploit",
+          "scoop": "scoop install metasploit",
+          "apt": "sudo apt install metasploit-framework",
+          "dnf": "sudo dnf install metasploit-framework",
+          "pacman": "sudo pacman -S metasploit",
+          "homebrew": "brew install metasploit"
+        }
+      },
+      {
+        "name": "Nmap",
+        "install": {
+          "choco": "choco install nmap",
+          "winget": "winget install nmap",
+          "scoop": "scoop install nmap",
+          "apt": "sudo apt install nmap",
+          "dnf": "sudo dnf install nmap",
+          "pacman": "sudo pacman -S nmap",
+          "homebrew": "brew install nmap"
+        }
+      },
+      {
+        "name": "Wireshark",
+        "install": {
+          "choco": "choco install wireshark",
+          "winget": "winget install wireshark",
+          "scoop": "scoop install wireshark",
+          "apt": "sudo apt install wireshark",
+          "dnf": "sudo dnf install wireshark",
+          "pacman": "sudo pacman -S wireshark",
+          "homebrew": "brew install wireshark"
+        }
+      },
+      {
+        "name": "John the Ripper",
+        "install": {
+          "choco": "choco install john",
+          "winget": "winget install john",
+          "scoop": "scoop install john",
+          "apt": "sudo apt install john",
+          "dnf": "sudo dnf install john",
+          "pacman": "sudo pacman -S john",
+          "homebrew": "brew install john"
+        }
+      },
+      {
+        "name": "Hydra",
+        "install": {
+          "choco": "choco install hydra",
+          "winget": "winget install hydra",
+          "scoop": "scoop install hydra",
+          "apt": "sudo apt install hydra",
+          "dnf": "sudo dnf install hydra",
+          "pacman": "sudo pacman -S hydra",
+          "homebrew": "brew install hydra"
+        }
+      },
+      {
+        "name": "Aircrack-ng",
+        "install": {
+          "choco": "choco install aircrack-ng",
+          "winget": "winget install aircrack-ng",
+          "scoop": "scoop install aircrack-ng",
+          "apt": "sudo apt install aircrack-ng",
+          "dnf": "sudo dnf install aircrack-ng",
+          "pacman": "sudo pacman -S aircrack-ng",
+          "homebrew": "brew install aircrack-ng"
+        }
+      },
+      {
+        "name": "Ettercap",
+        "install": {
+          "choco": "choco install ettercap",
+          "winget": "winget install ettercap",
+          "scoop": "scoop install ettercap",
+          "apt": "sudo apt install ettercap",
+          "dnf": "sudo dnf install ettercap",
+          "pacman": "sudo pacman -S ettercap",
+          "homebrew": "brew install ettercap"
+        }
+      }
+    ]
+  },
+  {
+    "category": "DevOps",
+    "tools": [
+      {
+        "name": "Jenkins",
+        "install": {
+          "choco": "choco install jenkins",
+          "winget": "winget install jenkins",
+          "scoop": "scoop install jenkins",
+          "apt": "sudo apt install jenkins",
+          "dnf": "sudo dnf install jenkins",
+          "pacman": "sudo pacman -S jenkins",
+          "homebrew": "brew install jenkins"
+        }
+      },
+      {
+        "name": "SonarQube",
+        "install": {
+          "choco": "choco install sonarqube",
+          "winget": "winget install sonarqube",
+          "scoop": "scoop install sonarqube",
+          "apt": "sudo apt install sonarqube",
+          "dnf": "sudo dnf install sonarqube",
+          "pacman": "sudo pacman -S sonarqube",
+          "homebrew": "brew install sonarqube"
+        }
+      },
+      {
+        "name": "Terraform",
+        "install": {
+          "choco": "choco install terraform",
+          "winget": "winget install terraform",
+          "scoop": "scoop install terraform",
+          "apt": "sudo apt install terraform",
+          "dnf": "sudo dnf install terraform",
+          "pacman": "sudo pacman -S terraform",
+          "homebrew": "brew install terraform"
+        }
+      },
+      {
+        "name": "Docker",
+        "install": {
+          "choco": "choco install docker-desktop",
+          "winget": "winget install docker",
+          "scoop": "scoop install docker",
+          "apt": "sudo apt install docker.io",
+          "dnf": "sudo dnf install docker",
+          "pacman": "sudo pacman -S docker",
+          "homebrew": "brew install --cask docker"
+        }
+      },
+      {
+        "name": "Kubernetes",
+        "install": {
+          "choco": "choco install kubernetes-cli",
+          "winget": "winget install kubernetes-cli",
+          "scoop": "scoop install kubernetes-cli",
+          "apt": "sudo apt install kubectl",
+          "dnf": "sudo dnf install kubectl",
+          "pacman": "sudo pacman -S kubectl",
+          "homebrew": "brew install kubectl"
+        }
+      },
+      {
+        "name": "Ansible",
+        "install": {
+          "choco": "choco install ansible",
+          "winget": "winget install ansible",
+          "scoop": "scoop install ansible",
+          "apt": "sudo apt install ansible",
+          "dnf": "sudo dnf install ansible",
+          "pacman": "sudo pacman -S ansible",
+          "homebrew": "brew install ansible"
+        }
+      },
+      {
+        "name": "Puppet",
+        "install": {
+          "choco": "choco install puppet",
+          "winget": "winget install puppet",
+          "scoop": "scoop install puppet",
+          "apt": "sudo apt install puppet",
+          "dnf": "sudo dnf install puppet",
+          "pacman": "sudo pacman -S puppet",
+          "homebrew": "brew install puppet"
+        }
+      },
+      {
+        "name": "Chef",
+        "install": {
+          "choco": "choco install chef",
+          "winget": "winget install chef",
+          "scoop": "scoop install chef",
+          "apt": "sudo apt install chef",
+          "dnf": "sudo dnf install chef",
+          "pacman": "sudo pacman -S chef",
+          "homebrew": "brew install chef"
+        }
+      }
+    ]
+  },
+  {
+    "category": "QA",
+    "tools": [
+      {
+        "name": "NUnit",
+        "install": {
+          "choco": "choco install nunit",
+          "winget": "winget install nunit",
+          "apt": "sudo apt install nunit",
+          "homebrew": "brew install nunit"
+        }
+      },
+      {
+        "name": "Mocha",
+        "install": {
+          "choco": "choco install mocha",
+          "winget": "winget install mocha",
+          "scoop": "scoop install mocha",
+          "apt": "sudo apt install mocha",
+          "homebrew": "brew install mocha"
+        }
+      },
+      {
+        "name": "PyTest",
+        "install": {
+          "choco": "choco install pytest",
+          "winget": "winget install pytest",
+          "scoop": "scoop install pytest",
+          "apt": "sudo apt install pytest",
+          "homebrew": "brew install pytest"
+        }
+      },
+      {
+        "name": "Selenium",
+        "install": {
+          "choco": "choco install selenium",
+          "winget": "winget install selenium",
+          "scoop": "scoop install selenium",
+          "apt": "sudo apt install selenium",
+          "homebrew": "brew install selenium"
+        }
+      },
+      {
+        "name": "Cypress",
+        "install": {
+          "choco": "choco install cypress",
+          "winget": "winget install cypress",
+          "scoop": "scoop install cypress",
+          "apt": "sudo apt install cypress",
+          "homebrew": "brew install cypress"
+        }
+      },
+      {
+        "name": "Appium",
+        "install": {
+          "choco": "choco install appium",
+          "winget": "winget install appium",
+          "scoop": "scoop install appium",
+          "apt": "sudo apt install appium",
+          "homebrew": "brew install appium"
+        }
+      },
+      {
+        "name": "Robot Framework",
+        "install": {
+          "choco": "choco install robotframework",
+          "winget": "winget install robotframework",
+          "scoop": "scoop install robotframework",
+          "apt": "sudo apt install robotframework",
+          "homebrew": "brew install robotframework"
+        }
+      },
+      {
+        "name": "TestComplete",
+        "install": {
+          "choco": "choco install testcomplete",
+          "homebrew": "brew install testcomplete"
+        }
+      },
+      {
+        "name": "Apache JMeter",
+        "install": {
+          "choco": "choco install jmeter",
+          "winget": "winget install jmeter",
+          "scoop": "scoop install jmeter",
+          "apt": "sudo apt install jmeter",
+          "homebrew": "brew install jmeter"
+        }
+      },
+      {
+        "name": "Gatling",
+        "install": {
+          "choco": "choco install gatling",
+          "winget": "winget install gatling",
+          "scoop": "scoop install gatling",
+          "apt": "sudo apt install gatling",
+          "homebrew": "brew install gatling"
+        }
+      },
+      {
+        "name": "Artillery",
+        "install": {
+          "winget": "winget install artillery",
+          "apt": "sudo apt install artillery",
+          "homebrew": "brew install artillery"
+        }
+      },
+      {
+        "name": "LoadRunner",
+        "install": {
+          "apt": "sudo apt install loadrunner"
+        }
+      },
+      {
+        "name": "OWASP ZAP",
+        "install": {
+          "choco": "choco install owasp-zap",
+          "winget": "winget install owasp-zap",
+          "scoop": "scoop install owasp-zap",
+          "apt": "sudo apt install zaproxy",
+          "dnf": "sudo dnf install zaproxy",
+          "pacman": "sudo pacman -S zaproxy",
+          "homebrew": "brew install owasp-zap"
+        }
+      },
+      {
+        "name": "Burp Suite",
+        "install": {
+          "choco": "choco install burpsuite",
+          "winget": "winget install burpsuite",
+          "scoop": "scoop install burpsuite",
+          "apt": "sudo apt install burpsuite",
+          "dnf": "sudo dnf install burpsuite",
+          "pacman": "sudo pacman -S burpsuite",
+          "homebrew": "brew install burp-suite"
+        }
+      },
+      {
+        "name": "Nikto",
+        "install": {
+          "choco": "choco install nikto",
+          "winget": "winget install nikto",
+          "scoop": "scoop install nikto",
+          "apt": "sudo apt install nikto",
+          "dnf": "sudo dnf install nikto",
+          "pacman": "sudo pacman -S nikto",
+          "homebrew": "brew install nikto"
+        }
+      },
+      {
+        "name": "Nessus",
+        "install": {
+          "apt": "sudo apt install nessus",
+          "homebrew": "brew install nessus"
+        }
+      },
+      {
+        "name": "Cucumber",
+        "install": {
+          "choco": "choco install cucumber",
+          "winget": "winget install cucumber",
+          "scoop": "scoop install cucumber",
+          "apt": "sudo apt install cucumber",
+          "homebrew": "brew install cucumber"
+        }
+      },
+      {
+        "name": "TestNG",
+        "install": {
+          "choco": "choco install testng",
+          "winget": "winget install testng",
+          "scoop": "scoop install testng",
+          "apt": "sudo apt install testng",
+          "homebrew": "brew install testng"
+        }
+      },
+      {
+        "name": "Protractor",
+        "install": {
+          "choco": "choco install protractor",
+          "winget": "winget install protractor",
+          "scoop": "scoop install protractor",
+          "apt": "sudo apt install protractor",
+          "homebrew": "brew install protractor"
+        }
+      },
+      {
+        "name": "Jenkins",
+        "install": {
+          "choco": "choco install jenkins",
+          "winget": "winget install jenkins",
+          "scoop": "scoop install jenkins",
+          "apt": "sudo apt install jenkins",
+          "dnf": "sudo dnf install jenkins",
+          "pacman": "sudo pacman -S jenkins",
+          "homebrew": "brew install jenkins"
+        }
+      },
+      {
+        "name": "Travis CI",
+        "install": {
+          "winget": "winget install travisci",
+          "apt": "sudo apt install travis",
+          "homebrew": "brew install travis"
+        }
+      },
+      {
+        "name": "CircleCI",
+        "install": {
+          "winget": "winget install circleci",
+          "apt": "sudo apt install circleci",
+          "homebrew": "brew install circleci"
+        }
+      },
+      {
+        "name": "SonarQube",
+        "install": {
+          "choco": "choco install sonarqube",
+          "winget": "winget install sonarqube",
+          "scoop": "scoop install sonarqube",
+          "apt": "sudo apt install sonarqube",
+          "dnf": "sudo dnf install sonarqube",
+          "pacman": "sudo pacman -S sonarqube",
+          "homebrew": "brew install sonarqube"
+        }
+      },
+      {
+        "name": "Codecov",
+        "install": {
+          "choco": "choco install codecov",
+          "apt": "sudo apt install codecov",
+          "homebrew": "brew install codecov"
+        }
+      }
+    ]
+  },
+  {
+    "category": "Data Processing",
+    "tools": [
+      {
+        "name": "Apache Hadoop",
+        "install": {
+          "choco": "choco install hadoop",
+          "winget": "winget install hadoop",
+          "apt": "sudo apt install hadoop",
+          "dnf": "sudo dnf install hadoop",
+          "pacman": "sudo pacman -S hadoop",
+          "homebrew": "brew install hadoop"
+        }
+      },
+      {
+        "name": "Apache Spark",
+        "install": {
+          "choco": "choco install apache-spark",
+          "winget": "winget install apache-spark",
+          "scoop": "scoop install apache-spark",
+          "apt": "sudo apt install spark",
+          "dnf": "sudo dnf install spark",
+          "pacman": "sudo pacman -S spark",
+          "homebrew": "brew install apache-spark"
+        }
+      },
+      {
+        "name": "Apache Flink",
+        "install": {
+          "choco": "choco install flink",
+          "winget": "winget install flink",
+          "scoop": "scoop install flink",
+          "apt": "sudo apt install flink",
+          "dnf": "sudo dnf install flink",
+          "pacman": "sudo pacman -S flink",
+          "homebrew": "brew install flink"
+        }
+      }
+    ]
+  },
+  {
+    "category": "Data Orchestration",
+    "tools": [
+      {
+        "name": "Apache Airflow",
+        "install": {
+          "choco": "choco install airflow",
+          "winget": "winget install airflow",
+          "scoop": "scoop install airflow",
+          "apt": "sudo apt install airflow",
+          "dnf": "sudo dnf install airflow",
+          "pacman": "sudo pacman -S airflow",
+          "homebrew": "brew install airflow"
+        }
+      },
+      {
+        "name": "Prefect",
+        "install": {
+          "winget": "winget install prefect",
+          "scoop": "scoop install prefect",
+          "apt": "sudo apt install prefect",
+          "homebrew": "brew install prefect"
+        }
+      },
+      {
+        "name": "LuigI",
+        "install": {
+          "apt": "sudo apt install luigi",
+          "homebrew": "brew install luigi"
+        }
+      }
+    ]
+  },
+  {
+    "category": "Data Warehouse",
+    "tools": [
+      {
+        "name": "Amazon Redshift",
+        "install": {
+          "homebrew": "brew install redshift"
+        }
+      },
+      {
+        "name": "Snowflake",
+        "install": {}
+      }
+    ]
+  },
+  {
+    "category": "Data Warehousing",
+    "tools": [
+      {
+        "name": "Google BigQuery",
+        "install": {
+          "apt": "sudo apt install google-cloud-sdk",
+          "homebrew": "brew install google-cloud-sdk"
+        }
+      }
+    ]
+  },
+  {
+    "category": "ETL",
+    "tools": [
+      {
+        "name": "dbt (Data Build Tool)",
+        "install": {
+          "choco": "choco install dbt",
+          "winget": "winget install dbt",
+          "scoop": "scoop install dbt",
+          "apt": "sudo apt install dbt",
+          "homebrew": "brew install dbt"
+        }
+      },
+      {
+        "name": "Talend",
+        "install": {
+          "choco": "choco install talend",
+          "apt": "sudo apt install talend",
+          "homebrew": "brew install talend"
+        }
+      }
+    ]
+  },
+  {
+    "category": "Data Pipeline",
+    "tools": [
+      {
+        "name": "Apache Nifi",
+        "install": {
+          "choco": "choco install nifi",
+          "apt": "sudo apt install nifi",
+          "homebrew": "brew install nifi"
+        }
+      },
+      {
+        "name": "StreamSets",
+        "install": {
+          "apt": "sudo apt install streamsets",
+          "homebrew": "brew install streamsets"
+        }
+      }
+    ]
+  },
+  {
+    "category": "NoSQL Database",
+    "tools": [
+      {
+        "name": "MongoDB",
+        "install": {
+          "choco": "choco install mongodb",
+          "winget": "winget install mongodb",
+          "scoop": "scoop install mongodb",
+          "apt": "sudo apt install mongodb",
+          "dnf": "sudo dnf install mongodb",
+          "pacman": "sudo pacman -S mongodb",
+          "homebrew": "brew install mongodb"
+        }
+      },
+      {
+        "name": "Cassandra",
+        "install": {
+          "choco": "choco install cassandra",
+          "scoop": "scoop install cassandra",
+          "apt": "sudo apt install cassandra",
+          "homebrew": "brew install cassandra"
+        }
+      }
+    ]
+  },
+  {
+    "category": "Relational Database",
+    "tools": [
+      {
+        "name": "PostgreSQL",
+        "install": {
+          "choco": "choco install postgresql",
+          "winget": "winget install postgresql",
+          "scoop": "scoop install postgresql",
+          "apt": "sudo apt install postgresql",
+          "dnf": "sudo dnf install postgresql",
+          "pacman": "sudo pacman -S postgresql",
+          "homebrew": "brew install postgresql"
+        }
+      }
+    ]
+  },
+  {
+    "category": "Data Query Engine",
+    "tools": [
+      {
+        "name": "Presto",
+        "install": {
+          "choco": "choco install presto",
+          "winget": "winget install presto",
+          "apt": "sudo apt install presto",
+          "homebrew": "brew install presto"
+        }
+      },
+      {
+        "name": "Trino",
+        "install": {
+          "choco": "choco install trino",
+          "apt": "sudo apt install trino",
+          "homebrew": "brew install trino"
+        }
+      }
+    ]
+  }
+]
