@@ -1,6 +1,6 @@
 
 
-# DevSetup Script Generator
+# DevSetup  
 
 ## Overview
 
@@ -51,7 +51,7 @@ With this tool, you can automate the setup of a developer environment, ensuring 
    ```bash
    git clone https://github.com/yourusername/devsetup.git
    cd devsetup
-````
+   ```
 
 2. **Install Dependencies**
 
