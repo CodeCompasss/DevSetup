@@ -38,7 +38,7 @@ export default function ScriptGenerator() {
   useEffect(() => {
     const fetchAndParse = async () => {
       try {
-        const res = await fetch("/tools.json"); // Assuming the JSON file is hosted at /tools.json
+        const res = await fetch("./tools.json"); 
         if (!res.ok) {
           throw new Error('Failed to fetch JSON file');
         }

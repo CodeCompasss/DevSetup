@@ -35,7 +35,7 @@ const convertExcelToJson = () => {
   });
 
   // Write the JSON data to a file
-  fs.writeFileSync('tools.json', JSON.stringify(Object.values(categoriesMap), null, 2));
+  fs.writeFileSync('./public/tools.json', JSON.stringify(Object.values(categoriesMap), null, 2));
 
   console.log("Excel file has been converted to JSON.");
 };
