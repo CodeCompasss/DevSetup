@@ -148,7 +148,7 @@ export default function ScriptGenerator() {
     <div className="bg-[#0d1117] min-h-screen text-white font-sans">
       <div className="max-w-screen mx-auto px-4 py-10">
         <h1 className="text-4xl sm:text-6xl font-extrabold text-center mb-10 tracking-tight">
-          Dev Installer Script Generator
+          DevSetup
         </h1>
 
         {/* OS Selector */}
