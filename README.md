@@ -83,6 +83,10 @@ With this tool, you can automate the setup of a developer environment, ensuring 
    * Copy the script to the clipboard or download it as a `.sh` or `.bat` file.
 
 ---
+## Contributing
+
+We'd love to have your help! Please see the [Contributing Guide](CONTRIBUTING.md) for instructions on how to add new tools or contribute to the project.
+
 
 ## Conclusion
 
