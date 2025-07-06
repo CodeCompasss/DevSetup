@@ -38,7 +38,7 @@ export default function ScriptGenerator() {
   useEffect(() => {
     const fetchAndParse = async () => {
       try {
-        const res = await fetch("/tools.xlsx");
+        const res = await fetch("./tools.xlsx");
         const arrayBuffer = await res.arrayBuffer();
         const workbook = XLSX.read(arrayBuffer, { type: "array" });
 
