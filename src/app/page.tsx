@@ -106,9 +106,22 @@ export default function ScriptGenerator() {
   return (
     <div className="bg-[#0d1117] min-h-screen text-white font-sans">
       <div className="max-w-screen mx-auto px-4 py-10">
-        <h1 className="text-4xl sm:text-6xl font-extrabold text-center mb-10 tracking-tight">
+        <h1 className="relative flex items-center justify-center text-4xl sm:text-6xl font-extrabold mb-10 tracking-tight">
           DevSetup
+          <a
+            href="https://tinyurl.com/your-form-link" // replace with your real form link
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute right-0 top-1/2 -translate-y-1/2 px-6 py-3 text-lg
+                      bg-gradient-to-r from-indigo-500 to-purple-600 
+                      hover:from-indigo-600 hover:to-purple-700
+                      text-white font-semibold rounded-full shadow-lg
+                      transition duration-200"
+          >
+          Add New +
+          </a>
         </h1>
+
 
         {/* OS Selector */}
         <div className="flex flex-wrap gap-3 justify-center sm:justify-start mb-6">
