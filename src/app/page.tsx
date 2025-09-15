@@ -109,7 +109,7 @@ export default function ScriptGenerator() {
         <h1 className="relative flex items-center justify-center text-4xl sm:text-6xl font-extrabold mb-10 tracking-tight">
           DevSetup
           <a
-            href="https://tinyurl.com/your-form-link" // replace with your real form link
+            href="https://forms.gle/cWfDnzvYo5dBuy7C7" 
             target="_blank"
             rel="noopener noreferrer"
             className="absolute right-0 top-1/2 -translate-y-1/2 px-6 py-3 text-lg
