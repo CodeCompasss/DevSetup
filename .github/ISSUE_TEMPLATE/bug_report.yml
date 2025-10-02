@@ -17,7 +17,6 @@ body:
       description: "Briefly describe the bug and the problem it causes"
       placeholder: |
         What is the incorrect behavior and what should happen instead?
-    validations:
       required: true
 
   - type: textarea
@@ -29,7 +28,6 @@ body:
         1. Go to '...'
         2. Click '...'
         3. Observe '...'
-    validations:
       required: true
 
   - type: dropdown
@@ -42,8 +40,7 @@ body:
         - "Medium - Affects functionality but not critical"
         - "High - Major functionality broken"
         - "Critical - Application unusable or data loss"
-      validations:
-        required: true
+      required: true
 
   - type: textarea
     id: environment
@@ -54,5 +51,4 @@ body:
         • OS: 
         • Browser: 
         • DevSetup Version:
-      validations:
-        required: true
+      required: true
