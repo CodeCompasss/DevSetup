@@ -76,8 +76,8 @@ We welcome contributions from the community! Here's how you can contribute:
 2. **Clone the forked repository** to your local machine.
 
    ```bash
-   git clone https://github.com/yourusername/devsetup.git
-   cd devsetup
+   git clone https://github.com/yourusername/DevSetup.git
+   cd DevSetup
    ```
 
 3. **Create a new branch** for your feature or bug fix. Make sure you are working in the `dev` branch.
@@ -109,21 +109,23 @@ We welcome contributions from the community! Here's how you can contribute:
 
 * **Don't forget** to sync your branch with the latest updates from the main repository to avoid merge conflicts.
 
-## Troubleshooting
+## 🔧 Troubleshooting
+
 
 ### Tools Not Appearing
-
 If you don’t see the new tools after adding them, ensure that you:
 
-* Correctly added the tools to the `tools.xlsx` file.
-* Ran the `convertExcelToJson.js` script to regenerate the `tools.json` file.
-
+* Ensure the tools were **correctly added** to `public/tools.xlsx`.
+* Run the conversion script to regenerate `tools.json`:
+```bash
+ node convertExcelToJson.js
+```
 ### JSON File Not Loading
-
 If the app fails to load tools, check the following:
 
 * Ensure the `tools.json` file is in the correct location and accessible.
 * Check the browser console for any errors that may point to issues with loading the JSON file.
+
 
 ### Other Issues
 
