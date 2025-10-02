@@ -107,10 +107,8 @@ export default function ScriptGenerator() {
         {/* Header with Title, Search, and Action buttons */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-12">
           {/* Left side - Title */}
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-left">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 drop-shadow-lg">
-              DEVSETUP
-            </span>
+          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-left">
+            DevSetup
           </h1>
 
           {/* Center/Bottom - Search Box */}
