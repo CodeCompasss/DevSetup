@@ -1,0 +1,31 @@
+# GitHub Issue Templates Configuration for DevSetup
+
+# Allow blank issues
+blank_issues_enabled: true
+
+# Default guidance for blank issues
+blank_issue_title: "Please provide a descriptive title for your issue"
+blank_issue_body: |
+  <!-- 
+  Thank you for creating an issue! 
+  Please provide a clear description to help us understand and address your concern.
+  -->
+
+  ## Description
+  <!-- Describe the issue or request -->
+
+  ## Context / Environment
+  <!-- Include any relevant environment info or background -->
+
+  ## Additional Information
+  <!-- Attach screenshots, logs, or other helpful details -->
+
+# Helpful links for contributors
+contact_links:
+  - name: 📃 Documentation Issues
+    url: https://github.com/CodeCompass/DevSetup/issues/new?labels=documentation
+    about: For documentation-related issues, please use this link.
+
+  - name: 🤔 Questions & Help
+    url: https://github.com/CodeCompass/DevSetup/discussions
+    about: For questions or help, please use discussions instead of opening an issue.
