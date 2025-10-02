@@ -275,13 +275,26 @@
           "pacman": "sudo pacman -S microsoft-edge",
           "homebrew": "brew install --cask microsoft-edge"
         }
+      },
+      {
+      "name": "Brave",
+      "install": {
+        "choco": "choco install brave",
+        "winget": "winget install Brave.Brave",
+        "scoop": "scoop install brave",
+        "apt": "sudo apt install apt-transport-https curl && curl -fsSL https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo gpg --dearmor -o /usr/share/keyrings/brave-browser-release.gpg && echo \"deb [signed-by=/usr/share/keyrings/brave-browser-release.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main\" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list && sudo apt update && sudo apt install brave-browser -y",
+        "dnf": "sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo && sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc && sudo dnf install brave-browser -y",
+        "pacman": "yay -S brave-bin",
+        "homebrew": "brew install --cask brave-browser"
       }
+    }
     ]
   },
   {
     "category": "DevOps",
     "tools": [
       {
+        
         "name": "Docker",
         "install": {
           "choco": "choco install docker-desktop",
@@ -305,6 +318,42 @@
           "homebrew": "brew install kubectl"
         }
       },
+      {
+          "name": "SonarQube",
+          "install": {
+            "choco": "choco install sonarqube",
+            "winget": "winget install SonarSource.SonarQube",
+            "scoop": "scoop install sonarqube",
+            "apt": "wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.2.77730.zip && sudo unzip sonarqube-9.9.2.77730.zip -d /opt",
+            "dnf": "wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.2.77730.zip && sudo unzip sonarqube-9.9.2.77730.zip -d /opt",
+            "pacman": "sudo pacman -S sonarqube",
+            "homebrew": "brew install sonarqube"
+          }
+        },
+        {
+          "name": "Terraform",
+          "install": {
+            "choco": "choco install terraform",
+            "winget": "winget install Hashicorp.Terraform",
+            "scoop": "scoop install terraform",
+            "apt": "sudo apt install terraform",
+            "dnf": "sudo dnf install terraform",
+            "pacman": "sudo pacman -S terraform",
+            "homebrew": "brew install terraform"
+          }
+        },
+        {
+          "name": "Jenkins",
+          "install": {
+            "choco": "choco install jenkins",
+            "winget": "winget install Jenkins.Jenkins",
+            "scoop": "scoop install jenkins",
+            "apt": "sudo apt install jenkins",
+            "dnf": "sudo dnf install jenkins",
+            "pacman": "sudo pacman -S jenkins",
+            "homebrew": "brew install jenkins"
+          }
+        },
       {
         "name": "Ansible",
         "install": {
@@ -345,7 +394,155 @@
           "pacman": "sudo pacman -S wireshark",
           "homebrew": "brew install wireshark"
         }
-      }
+      },
+
+      {
+          "name": "OWASP ZAP",
+          "install": {
+            "choco": "choco install zap",
+            "winget": "winget install OWASP.ZAP",
+            "scoop": "scoop install zap",
+            "apt": "sudo apt install zaproxy",
+            "dnf": "sudo dnf install zaproxy",
+            "pacman": "sudo pacman -S owasp-zap",
+            "homebrew": "brew install --cask owasp-zap"
+          }
+        },
+        {
+          "name": "Metasploit",
+          "install": {
+            "choco": "choco install metasploit",
+            "winget": "winget install Rapid7.Metasploit",
+            "scoop": "scoop install metasploit",
+            "apt": "curl https://raw.githubusercontent.com/rapid7/metasploit-framework/master/msfinstall | sudo bash",
+            "dnf": "curl https://raw.githubusercontent.com/rapid7/metasploit-framework/master/msfinstall | sudo bash",
+            "pacman": "sudo pacman -S metasploit",
+            "homebrew": "brew install metasploit"
+          }
+        }
     ]
-  }
-]
+  },
+  {
+      "category": "IDEs & Editors",
+      "tools": [
+        {
+          "name": "Visual Studio Code",
+          "install": {
+            "choco": "choco install vscode",
+            "winget": "winget install Microsoft.VisualStudioCode",
+            "scoop": "scoop install vscode",
+            "apt": "sudo apt install code",
+            "dnf": "sudo dnf install code",
+            "pacman": "sudo pacman -S code",
+            "homebrew": "brew install --cask visual-studio-code"
+          }
+        },
+        {
+          "name": "IntelliJ IDEA",
+          "install": {
+            "choco": "choco install intellijidea-community",
+            "winget": "winget install JetBrains.IntelliJIDEA.Community",
+            "scoop": "scoop install intellij-idea-ce",
+            "apt": "sudo snap install intellij-idea-community --classic",
+            "dnf": "sudo snap install intellij-idea-community --classic",
+            "pacman": "sudo pacman -S intellij-idea-community-edition",
+            "homebrew": "brew install --cask intellij-idea-ce"
+          }
+        },
+        {
+          "name": "PyCharm",
+          "install": {
+            "choco": "choco install pycharm-community",
+            "winget": "winget install JetBrains.PyCharm.Community",
+            "scoop": "scoop install pycharm-ce",
+            "apt": "sudo snap install pycharm-community --classic",
+            "dnf": "sudo snap install pycharm-community --classic",
+            "pacman": "sudo pacman -S pycharm-community-edition",
+            "homebrew": "brew install --cask pycharm-ce"
+          }
+        },
+        {
+          "name": "Vim",
+          "install": {
+            "choco": "choco install vim",
+            "winget": "winget install vim.vim",
+            "scoop": "scoop install vim",
+            "apt": "sudo apt install vim",
+            "dnf": "sudo dnf install vim",
+            "pacman": "sudo pacman -S vim",
+            "homebrew": "brew install vim"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Version Control",
+      "tools": [
+        {
+          "name": "Git",
+          "install": {
+            "choco": "choco install git",
+            "winget": "winget install Git.Git",
+            "scoop": "scoop install git",
+            "apt": "sudo apt install git",
+            "dnf": "sudo dnf install git",
+            "pacman": "sudo pacman -S git",
+            "homebrew": "brew install git"
+          }
+        },
+        {
+          "name": "GitHub CLI",
+          "install": {
+            "choco": "choco install gh",
+            "winget": "winget install GitHub.cli",
+            "scoop": "scoop install gh",
+            "apt": "sudo apt install gh",
+            "dnf": "sudo dnf install gh",
+            "pacman": "sudo pacman -S github-cli",
+            "homebrew": "brew install gh"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Communication Tools",
+      "tools": [
+        {
+          "name": "Discord",
+          "install": {
+            "choco": "choco install discord",
+            "winget": "winget install Discord.Discord",
+            "scoop": "scoop install discord",
+            "apt": "sudo snap install discord",
+            "dnf": "sudo snap install discord",
+            "pacman": "sudo pacman -S discord",
+            "homebrew": "brew install --cask discord"
+          }
+        },
+        {
+          "name": "Microsoft Teams",
+          "install": {
+            "choco": "choco install microsoft-teams",
+            "winget": "winget install Microsoft.Teams",
+            "scoop": "scoop install teams",
+            "apt": "sudo snap install teams",
+            "dnf": "sudo snap install teams",
+            "pacman": "sudo pacman -S teams",
+            "homebrew": "brew install --cask microsoft-teams"
+          }
+        },
+        {
+          "name": "Zoom",
+          "install": {
+            "choco": "choco install zoom",
+            "winget": "winget install Zoom.Zoom",
+            "scoop": "scoop install zoom",
+            "apt": "sudo snap install zoom-client",
+            "dnf": "sudo snap install zoom-client",
+            "pacman": "sudo pacman -S zoom",
+            "homebrew": "brew install --cask zoom"
+          }
+        }
+      ]
+    }
+  ]
