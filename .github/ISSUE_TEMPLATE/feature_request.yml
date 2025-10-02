@@ -1,0 +1,46 @@
+name: "Feature Request"
+description: "Suggest an idea or enhancement for this project"
+title: "[FEATURE] "
+labels: ["enhancement", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Thanks for your feature suggestion!
+        Please provide enough detail to help us understand your idea and its impact.
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: "Feature Description"
+      description: "What is the feature or improvement?"
+      placeholder: |
+        Describe the feature clearly. What should it do? What problem does it solve?
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: "Motivation / Rationale"
+      description: "Why is this feature important?"
+      placeholder: |
+        Explain why this feature matters and how it benefits users or improves the project.
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority Level"
+      description: "How important is this feature?"
+      options:
+        - "Low - Nice to have"
+        - "Medium - Would improve workflow"
+        - "High - Significant impact"
+        - "Critical - Blocking important use cases"
+
+  - type: textarea
+    id: demo
+    attributes:
+      label: "Demo / Mockup (Optional)"
+      description: "Add screenshots, mockups, or links to prototypes if available"
+      placeholder: |
+        Paste images, GIFs, or links here.
