@@ -1,5 +1,5 @@
 name: "Bug Report"
-description: "Report a bug to help improve DevSetup"
+description: "Report a bug to help us improve DevSetup"
 title: "[BUG] "
 labels: ["bug", "needs-triage"]
 assignees: []
@@ -7,27 +7,29 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Thank you for reporting a bug!
-        Please provide enough detail to help us reproduce and fix the issue.
+        ## Thanks for reporting a bug!
+        Please provide enough detail to help us reproduce and fix the issue quickly.
 
   - type: textarea
     id: bug-description
     attributes:
       label: "Bug Description"
-      description: "Briefly describe the bug and the problem it causes"
+      description: "Describe the bug clearly and concisely."
       placeholder: |
         What is the incorrect behavior and what should happen instead?
+    validations:
       required: true
 
   - type: textarea
     id: reproduction-steps
     attributes:
       label: "Steps to Reproduce"
-      description: "Provide step-by-step instructions to reproduce the bug"
+      description: "Provide step-by-step instructions to reproduce the bug."
       placeholder: |
         1. Go to '...'
         2. Click '...'
         3. Observe '...'
+    validations:
       required: true
 
   - type: dropdown
@@ -40,15 +42,17 @@ body:
         - "Medium - Affects functionality but not critical"
         - "High - Major functionality broken"
         - "Critical - Application unusable or data loss"
+    validations:
       required: true
 
   - type: textarea
     id: environment
     attributes:
       label: "Environment"
-      description: "Provide key environment details (OS, browser, version)"
+      description: "Provide key environment details (OS, browser, project version)."
       placeholder: |
         • OS: 
         • Browser: 
         • DevSetup Version:
+    validations:
       required: true
