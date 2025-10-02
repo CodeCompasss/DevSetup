@@ -34,26 +34,27 @@ export default function ScriptGenerator() {
   const [selectedTools, setSelectedTools] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // Load and parse JSON data on mount
+  // Theme
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
   useEffect(() => {
-    const fetchAndParse = async () => {
-      try {
-        const res = await fetch("./tools.json"); 
-        if (!res.ok) {
-          throw new Error('Failed to fetch JSON file');
-        }
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
 
+  // Fetch tools
+  useEffect(() => {
+    const fetchTools = async () => {
+      try {
+        const res = await fetch("./tools.json");
+        if (!res.ok) throw new Error("Failed to fetch JSON");
         const data: ToolCategory[] = await res.json();
         setToolsData(data);
-      } catch (error) {
-        console.error("Failed to load JSON data", error);
-        alert('Failed to load tool data. Please try again later.');
+      } catch {
+        alert("Failed to load tool data.");
       } finally {
         setLoading(false);
       }
     };
-
-    fetchAndParse();
+    fetchTools();
   }, []);
 
   const handleToolSelect = (toolName: string) => {
@@ -62,66 +63,69 @@ export default function ScriptGenerator() {
     );
   };
 
-  const generateScript = (): string => {
-    return toolsData
+  const generateScript = () =>
+    toolsData
       .flatMap((category) =>
         category.tools
           .filter((tool) => selectedTools.includes(tool.name) && tool.install[selectedPkg])
-          .map((tool) => tool.install[selectedPkg] as string)
+          .map((tool) => tool.install[selectedPkg]!)
       )
       .join("\n");
-  };
 
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(generateScript());
-      alert("Script copied to clipboard!");
-    } catch (err) {
-      alert("Failed to copy script: " + err);
+      alert("Script copied!");
+    } catch {
+      alert("Failed to copy");
     }
   };
 
   const handleDownload = () => {
-    const script = generateScript();
-    const blob = new Blob([script], { type: "text/plain;charset=utf-8" });
-    const url = URL.createObjectURL(blob);
+    const blob = new Blob([generateScript()], { type: "text/plain" });
     const link = document.createElement("a");
-    link.href = url;
+    link.href = URL.createObjectURL(blob);
     link.download = "install_script.sh";
-    document.body.appendChild(link);
     link.click();
-    document.body.removeChild(link);
   };
 
-  // Loading UI
-  if (loading) {
+  if (loading)
     return (
-      <div className="text-white font-sans text-center mt-20">
+      <div className="text-[var(--foreground)] font-sans text-center mt-20">
         <div>Loading tools data...</div>
-        <div className="spinner">⏳</div> {/* Optionally add a spinner here */}
+        <div className="spinner">⏳</div>
       </div>
     );
-  }
 
   return (
-    <div className="bg-[#0d1117] min-h-screen text-white font-sans">
+    <div
+      className="min-h-screen font-sans bg-[var(--background)] text-[var(--foreground)] transition-colors duration-300"
+      data-theme={theme}
+    >
       <div className="max-w-screen mx-auto px-4 py-10">
-        <h1 className="relative flex items-center justify-center text-4xl sm:text-6xl font-extrabold mb-10 tracking-tight">
+        {/* Header with Add + and theme toggle */}
+        <h1 className="flex items-center justify-center text-4xl sm:text-6xl font-extrabold mb-10 relative tracking-tight">
           DevSetup
-          <a
-            href="https://forms.gle/cWfDnzvYo5dBuy7C7" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute right-0 top-1/2 -translate-y-1/2 px-6 py-3 text-lg
-                      bg-gradient-to-r from-indigo-500 to-purple-600 
-                      hover:from-indigo-600 hover:to-purple-700
-                      text-white font-semibold rounded-full shadow-lg
-                      transition duration-200"
-          >
-          Add New +
-          </a>
-        </h1>
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 flex gap-3">
+            {/* Add New + button */}
+            <a
+              href="https://forms.gle/cWfDnzvYo5dBuy7C7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 text-lg bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold rounded-full shadow-lg transition duration-300"
+            >
+              Add New +
+            </a>
 
+            {/* Theme Toggle button (exactly same size/style as Add +) */}
+            <button
+              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+              className="px-6 py-3 text-lg bg-gradient-to-r from-gray-500 to-gray-700 hover:from-gray-600 hover:to-gray-800 text-white font-semibold rounded-full shadow-lg transition duration-300"
+            >
+              {theme === "light" ? "🌞 Light" : "🌙 Dark"}
+            </button>
+          </div>
+        </h1>
 
         {/* OS Selector */}
         <div className="flex flex-wrap gap-3 justify-center sm:justify-start mb-6">
@@ -133,10 +137,10 @@ export default function ScriptGenerator() {
                 setSelectedPkg(pkgManagers[os][0]);
                 setSelectedTools([]);
               }}
-              className={`px-4 py-2 rounded-xl text-sm font-semibold transition duration-200 ${
+              className={`px-6 py-3 rounded-full text-sm font-semibold transition duration-200 ${
                 selectedOS === os
-                  ? "bg-indigo-600 text-white shadow-lg"
-                  : "bg-gray-800 hover:bg-gray-700 text-gray-300"
+                  ? "bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg"
+                  : "bg-[var(--button-bg)] text-[var(--button-text)] hover:bg-gray-700"
               }`}
             >
               {os.toUpperCase()}
@@ -153,10 +157,10 @@ export default function ScriptGenerator() {
                 setSelectedPkg(pkg);
                 setSelectedTools([]);
               }}
-              className={`px-4 py-2 rounded-xl text-sm font-semibold transition duration-200 ${
+              className={`px-6 py-3 rounded-full text-sm font-semibold transition duration-200 ${
                 selectedPkg === pkg
-                  ? "bg-green-600 text-white shadow-lg"
-                  : "bg-gray-800 hover:bg-gray-700 text-gray-300"
+                  ? "bg-gradient-to-r from-green-500 to-green-600 text-white shadow-lg"
+                  : "bg-[var(--button-bg)] text-[var(--button-text)] hover:bg-gray-700"
               }`}
             >
               {pkg}
@@ -176,10 +180,8 @@ export default function ScriptGenerator() {
                 return (
                   <label
                     key={index}
-                    className={`relative flex flex-col items-center justify-center bg-[#161b22] rounded-2xl p-4 transition cursor-pointer border border-transparent ${
-                      isAvailable
-                        ? "hover:shadow-xl hover:border-indigo-500"
-                        : "opacity-40 cursor-not-allowed"
+                    className={`relative flex flex-col items-center justify-center rounded-2xl p-4 transition cursor-pointer border border-transparent bg-[var(--card-bg)] ${
+                      isAvailable? "hover:shadow-xl hover:border-indigo-500" : "opacity-50 cursor-not-allowed"
                     }`}
                   >
                     <input
@@ -204,7 +206,7 @@ export default function ScriptGenerator() {
             readOnly
             value={generateScript()}
             rows={6}
-            className="w-full bg-[#0d1117] text-gray-100 border border-gray-600 rounded-lg p-4 font-mono resize-none"
+            className="w-full bg-[var(--card-bg)] text-[var(--foreground)] border border-gray-600 rounded-lg p-4 font-mono resize-none transition-colors duration-300"
           />
         </div>
 
@@ -212,13 +214,13 @@ export default function ScriptGenerator() {
         <div className="mt-6 flex flex-wrap gap-4">
           <button
             onClick={handleCopy}
-            className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition"
+            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full shadow-lg transition duration-300"
           >
             Copy to Clipboard
           </button>
           <button
             onClick={handleDownload}
-            className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl transition"
+            className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full shadow-lg transition duration-300"
           >
             Download Script
           </button>
