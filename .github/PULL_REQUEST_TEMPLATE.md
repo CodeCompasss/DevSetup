@@ -16,7 +16,7 @@ Briefly describe the motivation and what problem this solves
 
 - **Live Demo:** [Insert link here]  
 - **Screenshots / GIFs:**  
-  ![Before](url) → ![After](url)  
+  ![Before] → ![After]
 
 ## Checklist
 
@@ -27,4 +27,4 @@ Briefly describe the motivation and what problem this solves
 - [ ] Verified for performance or security impact (if applicable)  
 
 
-## Additional Info (optional)
+## Additional Info (Optional)
