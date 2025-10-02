@@ -33,6 +33,7 @@ export default function ScriptGenerator() {
   const [selectedPkg, setSelectedPkg] = useState<PkgManager>("choco");
   const [selectedTools, setSelectedTools] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
   // Theme
   const [theme, setTheme] = useState<"light" | "dark">("dark");
@@ -103,10 +104,39 @@ export default function ScriptGenerator() {
       data-theme={theme}
     >
       <div className="max-w-screen mx-auto px-4 py-10">
-        {/* Header with Add + and theme toggle */}
-        <h1 className="flex items-center justify-center text-4xl sm:text-6xl font-extrabold mb-10 relative tracking-tight">
-          DevSetup
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 flex gap-3">
+        {/* Header with Search, Add + and theme toggle */}
+        <div className="flex items-center justify-between mb-10">
+          {/* Left side - Search Box */}
+          <div className="relative w-64 hidden sm:block">
+            <input
+              type="text"
+              placeholder="Search tools..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full px-4 py-2 pl-10 bg-[var(--card-bg)] text-[var(--foreground)] border border-gray-600 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200 text-sm"
+            />
+            <svg
+              className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </div>
+
+          {/* Center - Title */}
+          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight">
+            DevSetup
+          </h1>
+
+          {/* Right side - Action buttons */}
+          <div className="flex gap-3">
             {/* Add New + button */}
             <a
               href="https://forms.gle/cWfDnzvYo5dBuy7C7"
@@ -117,7 +147,7 @@ export default function ScriptGenerator() {
               Add New +
             </a>
 
-            {/* Theme Toggle button (exactly same size/style as Add +) */}
+            {/* Theme Toggle button */}
             <button
               onClick={() => setTheme(theme === "light" ? "dark" : "light")}
               className="px-6 py-3 text-lg bg-gradient-to-r from-gray-500 to-gray-700 hover:from-gray-600 hover:to-gray-800 text-white font-semibold rounded-full shadow-lg transition duration-300"
@@ -125,7 +155,33 @@ export default function ScriptGenerator() {
               {theme === "light" ? "🌞 Light" : "🌙 Dark"}
             </button>
           </div>
-        </h1>
+        </div>
+
+        {/* Mobile Search Box */}
+        <div className="mb-6 sm:hidden">
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search tools..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full px-4 py-3 pl-10 bg-[var(--card-bg)] text-[var(--foreground)] border border-gray-600 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
+            />
+            <svg
+              className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </div>
+        </div>
 
         {/* OS Selector */}
         <div className="flex flex-wrap gap-3 justify-center sm:justify-start mb-6">
@@ -169,35 +225,45 @@ export default function ScriptGenerator() {
         </div>
 
         {/* Tool Categories */}
-        {toolsData.map((group, i) => (
-          <div key={i} className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-1">
-              {group.category}
-            </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-6">
-              {group.tools.map((tool, index) => {
-                const isAvailable = !!tool.install[selectedPkg];
-                return (
-                  <label
-                    key={index}
-                    className={`relative flex flex-col items-center justify-center rounded-2xl p-4 transition cursor-pointer border border-transparent bg-[var(--card-bg)] ${
-                      isAvailable? "hover:shadow-xl hover:border-indigo-500" : "opacity-50 cursor-not-allowed"
-                    }`}
-                  >
-                    <input
-                      type="checkbox"
-                      disabled={!isAvailable}
-                      checked={selectedTools.includes(tool.name)}
-                      onChange={() => handleToolSelect(tool.name)}
-                      className="absolute top-2 right-2 w-5 h-5 accent-indigo-500"
-                    />
-                    <span className="text-sm text-center">{tool.name}</span>
-                  </label>
-                );
-              })}
+        {toolsData.map((group, i) => {
+          // Filter tools based on search query
+          const filteredTools = group.tools.filter(tool => 
+            tool.name.toLowerCase().includes(searchQuery.toLowerCase())
+          );
+          
+          // Only render category if it has matching tools
+          if (filteredTools.length === 0) return null;
+          
+          return (
+            <div key={i} className="mb-10">
+              <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-1">
+                {group.category}
+              </h2>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-6">
+                {filteredTools.map((tool, index) => {
+                  const isAvailable = !!tool.install[selectedPkg];
+                  return (
+                    <label
+                      key={index}
+                      className={`relative flex flex-col items-center justify-center rounded-2xl p-4 transition cursor-pointer border border-transparent bg-[var(--card-bg)] ${
+                        isAvailable? "hover:shadow-xl hover:border-indigo-500" : "opacity-50 cursor-not-allowed"
+                      }`}
+                    >
+                      <input
+                        type="checkbox"
+                        disabled={!isAvailable}
+                        checked={selectedTools.includes(tool.name)}
+                        onChange={() => handleToolSelect(tool.name)}
+                        className="absolute top-2 right-2 w-5 h-5 accent-indigo-500"
+                      />
+                      <span className="text-sm text-center">{tool.name}</span>
+                    </label>
+                  );
+                })}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
 
         {/* Script Output */}
         <div className="mt-12">
