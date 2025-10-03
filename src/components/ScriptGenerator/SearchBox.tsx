@@ -5,7 +5,7 @@ interface Props {
 
 export default function SearchBox({ value, onChange }: Props) {
   return (
-    <div className="relative w-full max-w-2xl lg:max-w-3xl">
+    <div className="relative w-full max-w-2xl lg:max-w-3xl mb-8">
       <input
         type="text"
         placeholder="Search for development tools..."
