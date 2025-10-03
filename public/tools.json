@@ -275,7 +275,19 @@
           "pacman": "sudo pacman -S microsoft-edge",
           "homebrew": "brew install --cask microsoft-edge"
         }
+      },
+      {
+  "name": "Brave",
+  "install": {
+    "choco": "choco install brave --pre",
+    "winget": "winget install --id=Brave.Brave -e",
+    "scoop": "scoop bucket add extras && scoop install extras/brave",
+    "apt": "sudo apt install curl && sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg && sudo curl -fsSLo /etc/apt/sources.list.d/brave-browser-release.sources https://brave-browser-apt-release.s3.brave.com/brave-browser.sources && sudo apt update && sudo apt install brave-browser",
+    "dnf": "sudo dnf install dnf-plugins-core && sudo dnf config-manager --add-repo=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo && sudo dnf install brave-browser",
+    "pacman": "sudo pacman -Sy brave-browser",
+        "homebrew": "brew install --cask brave-browser"
       }
+    }
     ]
   },
   {
@@ -347,5 +359,59 @@
         }
       }
     ]
-  }
+  },
+  {
+  "category": "Utilities",
+  "tools": [
+    {
+      "name": "VLC",
+      "install": {
+        "choco": "choco install vlc",
+        "winget": "winget install --id=VideoLAN.VLC -e",
+        "scoop": "scoop bucket add extras && scoop install extras/vlc",
+        "apt": "sudo apt install vlc",
+        "dnf": "sudo dnf install vlc",
+        "pacman": "sudo pacman -S vlc",
+        "homebrew": "brew install --cask vlc"
+      }
+    },
+    {
+      "name": "OBS Studio",
+      "install": {
+        "choco": "choco install obs-studio",
+        "winget": "winget install --id=OBSProject.OBSStudio -e",
+        "scoop": "scoop bucket add extras && scoop install extras/obs-studio",
+        "apt": "sudo apt install obs-studio",
+        "dnf": "sudo dnf install obs-studio",
+        "pacman": "sudo pacman -S obs-studio",
+        "homebrew": ""
+      }
+    },
+    {
+      "name": "Notion",
+      "install": {
+        "choco": "choco install notion",
+        "winget": "winget install --id=Notion.Notion -e",
+        "scoop": "scoop bucket add extras && scoop install extras/notion",
+        "apt": "",
+        "dnf": "",
+        "pacman": "",
+        "homebrew": "brew install --cask notion"
+      }
+    },
+    {
+      "name": "Ollama",
+      "install": {
+        "choco": "choco install ollama",
+        "winget": "winget install --id=Ollama.Ollama -e",
+        "scoop": "scoop bucket add main && scoop install main/ollama",
+        "apt": "",
+        "dnf": "",
+        "pacman": "",
+        "homebrew": "brew install ollama"
+      }
+    }
+  ]
+}
+
 ]
