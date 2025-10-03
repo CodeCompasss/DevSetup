@@ -4,6 +4,7 @@
     "tools": [
       {
         "name": "Python",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
         "install": {
           "choco": "choco install python",
           "winget": "winget install Python",
@@ -16,6 +17,7 @@
       },
       {
         "name": "C",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
         "install": {
           "choco": "choco install gcc",
           "winget": "winget install gcc",
@@ -28,6 +30,7 @@
       },
       {
         "name": "C++",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
         "install": {
           "choco": "choco install gcc",
           "winget": "winget install gcc",
@@ -40,6 +43,7 @@
       },
       {
         "name": "Rust",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/rust.svg",
         "install": {
           "choco": "choco install rust",
           "winget": "winget install rust",
@@ -52,6 +56,7 @@
       },
       {
         "name": "Go",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg",
         "install": {
           "choco": "choco install golang",
           "winget": "winget install golang",
@@ -64,6 +69,7 @@
       },
       {
         "name": "Java",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
         "install": {
           "choco": "choco install openjdk",
           "winget": "winget install openjdk",
@@ -76,6 +82,7 @@
       },
       {
         "name": "Kotlin",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
         "install": {
           "choco": "choco install kotlin",
           "winget": "winget install kotlin",
@@ -88,6 +95,7 @@
       },
       {
         "name": "R",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg",
         "install": {
           "choco": "choco install r",
           "winget": "winget install r",
@@ -100,6 +108,7 @@
       },
       {
         "name": "Ruby",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg",
         "install": {
           "choco": "choco install ruby",
           "winget": "winget install ruby",
@@ -112,6 +121,7 @@
       },
       {
         "name": "Perl",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/perl/perl-original.svg",
         "install": {
           "choco": "choco install perl",
           "winget": "winget install perl",
@@ -124,6 +134,7 @@
       },
       {
         "name": "Lua",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg",
         "install": {
           "choco": "choco install lua",
           "winget": "winget install lua",
@@ -136,6 +147,7 @@
       },
       {
         "name": "Haskell",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/haskell/haskell-original.svg",
         "install": {
           "choco": "choco install haskell",
           "winget": "winget install haskell",
@@ -148,6 +160,7 @@
       },
       {
         "name": "Dart",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
         "install": {
           "choco": "choco install dart-sdk",
           "winget": "winget install dart-sdk",
@@ -160,6 +173,7 @@
       },
       {
         "name": "Node.js",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
         "install": {
           "choco": "choco install nodejs",
           "winget": "winget install nodejs",
@@ -177,6 +191,7 @@
     "tools": [
       {
         "name": "PostgreSQL",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
         "install": {
           "choco": "choco install postgresql",
           "winget": "winget install postgresql",
@@ -189,6 +204,7 @@
       },
       {
         "name": "MySQL",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
         "install": {
           "choco": "choco install mysql",
           "winget": "winget install mysql",
@@ -201,6 +217,7 @@
       },
       {
         "name": "SQLite",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
         "install": {
           "choco": "choco install sqlite",
           "winget": "winget install sqlite",
@@ -213,6 +230,7 @@
       },
       {
         "name": "MongoDB",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
         "install": {
           "choco": "choco install mongodb",
           "winget": "winget install mongodb",
@@ -225,6 +243,7 @@
       },
       {
         "name": "Redis",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
         "install": {
           "choco": "choco install redis",
           "winget": "winget install redis",
@@ -242,6 +261,7 @@
     "tools": [
       {
         "name": "Chrome",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg",
         "install": {
           "choco": "choco install googlechrome",
           "winget": "winget install googlechrome",
@@ -254,6 +274,7 @@
       },
       {
         "name": "Firefox",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg",
         "install": {
           "choco": "choco install firefox",
           "winget": "winget install firefox",
@@ -266,6 +287,7 @@
       },
       {
         "name": "Edge",
+        "iconsrc": "https://upload.wikimedia.org/wikipedia/commons/9/98/Microsoft_Edge_logo_%282019%29.svg",
         "install": {
           "choco": "choco install microsoft-edge",
           "winget": "winget install microsoft-edge",
@@ -278,6 +300,7 @@
       },
       {
   "name": "Brave",
+  "iconsrc": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/brave.svg",
   "install": {
     "choco": "choco install brave --pre",
     "winget": "winget install --id=Brave.Brave -e",
@@ -295,6 +318,7 @@
     "tools": [
       {
         "name": "Docker",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
         "install": {
           "choco": "choco install docker-desktop",
           "winget": "winget install docker",
@@ -307,6 +331,7 @@
       },
       {
         "name": "Kubernetes",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
         "install": {
           "choco": "choco install kubernetes-cli",
           "winget": "winget install kubernetes-cli",
@@ -319,6 +344,7 @@
       },
       {
         "name": "Ansible",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg",
         "install": {
           "choco": "choco install ansible",
           "winget": "winget install ansible",
@@ -336,6 +362,7 @@
     "tools": [
       {
         "name": "Nmap",
+        "iconsrc": "https://nmap.org/images/nmap-logo-256x256.png",
         "install": {
           "choco": "choco install nmap",
           "winget": "winget install nmap",
@@ -348,6 +375,7 @@
       },
       {
         "name": "Wireshark",
+        "iconsrc": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/wireshark.svg",
         "install": {
           "choco": "choco install wireshark",
           "winget": "winget install wireshark",
@@ -365,6 +393,7 @@
   "tools": [
     {
       "name": "VLC",
+      "iconsrc": "https://upload.wikimedia.org/wikipedia/commons/e/e6/VLC_Icon.svg",
       "install": {
         "choco": "choco install vlc",
         "winget": "winget install --id=VideoLAN.VLC -e",
@@ -377,6 +406,7 @@
     },
     {
       "name": "OBS Studio",
+      "iconsrc": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/obsstudio.svg",
       "install": {
         "choco": "choco install obs-studio",
         "winget": "winget install --id=OBSProject.OBSStudio -e",
@@ -389,6 +419,7 @@
     },
     {
       "name": "Notion",
+      "iconsrc": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg",
       "install": {
         "choco": "choco install notion",
         "winget": "winget install --id=Notion.Notion -e",
@@ -401,6 +432,7 @@
     },
     {
       "name": "Ollama",
+      "iconsrc": "https://ollama.com/public/ollama.png",
       "install": {
         "choco": "choco install ollama",
         "winget": "winget install --id=Ollama.Ollama -e",
