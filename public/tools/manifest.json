@@ -1,0 +1,38 @@
+[
+  {
+    "id": "programming_languages",
+    "name": "Programming Languages",
+    "file": "/tools/programming_languages.json",
+    "count": 14
+  },
+  {
+    "id": "database",
+    "name": "Database",
+    "file": "/tools/database.json",
+    "count": 5
+  },
+  {
+    "id": "browser",
+    "name": "Browser",
+    "file": "/tools/browser.json",
+    "count": 4
+  },
+  {
+    "id": "devops",
+    "name": "DevOps",
+    "file": "/tools/devops.json",
+    "count": 3
+  },
+  {
+    "id": "cybersecurity",
+    "name": "Cybersecurity",
+    "file": "/tools/cybersecurity.json",
+    "count": 2
+  },
+  {
+    "id": "utilties",
+    "name": "Utilties",
+    "file": "/tools/utilties.json",
+    "count": 4
+  }
+]

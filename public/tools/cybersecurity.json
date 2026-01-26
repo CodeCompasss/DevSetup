@@ -1,0 +1,32 @@
+{
+  "id": "cybersecurity",
+  "category": "Cybersecurity",
+  "tools": [
+    {
+      "id": "nmap",
+      "name": "Nmap",
+      "install": {
+        "choco": "choco install nmap",
+        "winget": "winget install nmap",
+        "scoop": "scoop install nmap",
+        "apt": "sudo apt install nmap",
+        "dnf": "sudo dnf install brave-browser",
+        "pacman": "sudo pacman -S nmap",
+        "homebrew": "brew install nmap"
+      }
+    },
+    {
+      "id": "wireshark",
+      "name": "Wireshark",
+      "install": {
+        "choco": "choco install wireshark",
+        "winget": "winget install wireshark",
+        "scoop": "scoop install wireshark",
+        "apt": "sudo apt install wireshark",
+        "dnf": "sudo dnf install wireshark",
+        "pacman": "sudo pacman -S wireshark",
+        "homebrew": "brew install wireshark"
+      }
+    }
+  ]
+}

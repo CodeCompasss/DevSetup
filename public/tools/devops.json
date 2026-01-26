@@ -1,0 +1,45 @@
+{
+  "id": "devops",
+  "category": "DevOps",
+  "tools": [
+    {
+      "id": "docker",
+      "name": "Docker",
+      "install": {
+        "choco": "choco install docker-desktop",
+        "winget": "winget install docker",
+        "scoop": "scoop install docker",
+        "apt": "sudo apt install docker.io",
+        "dnf": "sudo dnf install docker",
+        "pacman": "sudo pacman -S docker",
+        "homebrew": "brew install --cask docker"
+      }
+    },
+    {
+      "id": "kubernetes",
+      "name": "Kubernetes",
+      "install": {
+        "choco": "choco install kubernetes-cli",
+        "winget": "winget install kubernetes-cli",
+        "scoop": "scoop install kubernetes-cli",
+        "apt": "sudo apt install kubectl",
+        "dnf": "sudo dnf config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo",
+        "pacman": "sudo pacman -S kubectl",
+        "homebrew": "brew install kubectl"
+      }
+    },
+    {
+      "id": "ansible",
+      "name": "Ansible",
+      "install": {
+        "choco": "choco install ansible",
+        "winget": "winget install ansible",
+        "scoop": "scoop install ansible",
+        "apt": "sudo apt install ansible",
+        "dnf": "sudo dnf install ansible",
+        "pacman": "sudo pacman -S ansible",
+        "homebrew": "brew install ansible"
+      }
+    }
+  ]
+}

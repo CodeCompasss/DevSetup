@@ -8,7 +8,7 @@ export function generateScript(
   return toolsData
     .flatMap((category) =>
       category.tools
-        .filter((tool) => selectedTools.includes(tool.name) && tool.install[selectedPkg])
+        .filter((tool) => selectedTools.includes(tool.id) && tool.install[selectedPkg])
         .map((tool) => tool.install[selectedPkg]!)
     )
     .join("\n");

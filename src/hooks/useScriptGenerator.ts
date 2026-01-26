@@ -20,9 +20,9 @@ export function useScriptGenerator(initialOS: OS = "windows") {
     setSelectedTools([]);
   };
 
-  const toggleTool = (toolName: string) => {
+  const toggleTool = (toolId: string) => {
     setSelectedTools((prev) =>
-      prev.includes(toolName) ? prev.filter((t) => t !== toolName) : [...prev, toolName]
+      prev.includes(toolId) ? prev.filter((t) => t !== toolId) : [...prev, toolId]
     );
   };
 

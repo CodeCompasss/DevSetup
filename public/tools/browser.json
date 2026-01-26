@@ -1,0 +1,58 @@
+{
+  "id": "browser",
+  "category": "Browser",
+  "tools": [
+    {
+      "id": "chrome",
+      "name": "Chrome",
+      "install": {
+        "choco": "choco install googlechrome",
+        "winget": "winget install googlechrome",
+        "scoop": "scoop install googlechrome",
+        "apt": "sudo apt install google-chrome-stable",
+        "dnf": "sudo dnf install google-chrome-stable",
+        "pacman": "sudo pacman -S google-chrome",
+        "homebrew": "brew install --cask google-chrome"
+      }
+    },
+    {
+      "id": "firefox",
+      "name": "Firefox",
+      "install": {
+        "choco": "choco install firefox",
+        "winget": "winget install firefox",
+        "scoop": "scoop install firefox",
+        "apt": "sudo apt install firefox",
+        "dnf": "sudo dnf install firefox",
+        "pacman": "sudo pacman -S firefox",
+        "homebrew": "brew install firefox"
+      }
+    },
+    {
+      "id": "edge",
+      "name": "Edge",
+      "install": {
+        "choco": "choco install microsoft-edge",
+        "winget": "winget install microsoft-edge",
+        "scoop": "scoop install microsoft-edge",
+        "apt": "sudo apt install microsoft-edge",
+        "dnf": "sudo dnf install microsoft-edge",
+        "pacman": "sudo pacman -S microsoft-edge",
+        "homebrew": "brew install --cask microsoft-edge"
+      }
+    },
+    {
+      "id": "brave",
+      "name": "Brave",
+      "install": {
+        "choco": "choco install brave --pre ",
+        "winget": "winget install --id=Brave.Brave  -e",
+        "scoop": "scoop bucket add extras \nscoop install extras/brave",
+        "apt": "sudo apt install curl\n\nsudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg\n\nsudo curl -fsSLo /etc/apt/sources.list.d/brave-browser-release.sources https://brave-browser-apt-release.s3.brave.com/brave-browser.sources\n\nsudo apt update\n\nsudo apt install brave-browser",
+        "dnf": "sudo dnf install dnf-plugins-core  sudo dnf config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo  sudo dnf install brave-browser",
+        "pacman": "sudo pacman -Sy brave-browser",
+        "homebrew": "brew install --cask brave-browser"
+      }
+    }
+  ]
+}

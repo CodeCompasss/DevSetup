@@ -1,10 +1,11 @@
 [
   {
+    "id": "programming_languages",
     "category": "Programming Languages",
     "tools": [
       {
+        "id": "python",
         "name": "Python",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
         "install": {
           "choco": "choco install python",
           "winget": "winget install Python",
@@ -16,8 +17,8 @@
         }
       },
       {
+        "id": "c",
         "name": "C",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
         "install": {
           "choco": "choco install gcc",
           "winget": "winget install gcc",
@@ -29,8 +30,8 @@
         }
       },
       {
+        "id": "c__",
         "name": "C++",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
         "install": {
           "choco": "choco install gcc",
           "winget": "winget install gcc",
@@ -42,8 +43,8 @@
         }
       },
       {
+        "id": "rust",
         "name": "Rust",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/rust.svg",
         "install": {
           "choco": "choco install rust",
           "winget": "winget install rust",
@@ -55,8 +56,8 @@
         }
       },
       {
+        "id": "go",
         "name": "Go",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg",
         "install": {
           "choco": "choco install golang",
           "winget": "winget install golang",
@@ -68,8 +69,8 @@
         }
       },
       {
+        "id": "java",
         "name": "Java",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
         "install": {
           "choco": "choco install openjdk",
           "winget": "winget install openjdk",
@@ -81,8 +82,8 @@
         }
       },
       {
+        "id": "kotlin",
         "name": "Kotlin",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
         "install": {
           "choco": "choco install kotlin",
           "winget": "winget install kotlin",
@@ -94,8 +95,8 @@
         }
       },
       {
+        "id": "r",
         "name": "R",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg",
         "install": {
           "choco": "choco install r",
           "winget": "winget install r",
@@ -107,8 +108,8 @@
         }
       },
       {
+        "id": "ruby",
         "name": "Ruby",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg",
         "install": {
           "choco": "choco install ruby",
           "winget": "winget install ruby",
@@ -120,8 +121,8 @@
         }
       },
       {
+        "id": "perl",
         "name": "Perl",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/perl/perl-original.svg",
         "install": {
           "choco": "choco install perl",
           "winget": "winget install perl",
@@ -133,8 +134,8 @@
         }
       },
       {
+        "id": "lua",
         "name": "Lua",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg",
         "install": {
           "choco": "choco install lua",
           "winget": "winget install lua",
@@ -146,8 +147,8 @@
         }
       },
       {
+        "id": "haskell",
         "name": "Haskell",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/haskell/haskell-original.svg",
         "install": {
           "choco": "choco install haskell",
           "winget": "winget install haskell",
@@ -159,8 +160,8 @@
         }
       },
       {
+        "id": "dart",
         "name": "Dart",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
         "install": {
           "choco": "choco install dart-sdk",
           "winget": "winget install dart-sdk",
@@ -172,8 +173,8 @@
         }
       },
       {
+        "id": "node_js",
         "name": "Node.js",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
         "install": {
           "choco": "choco install nodejs",
           "winget": "winget install nodejs",
@@ -187,11 +188,12 @@
     ]
   },
   {
+    "id": "database",
     "category": "Database",
     "tools": [
       {
+        "id": "postgresql",
         "name": "PostgreSQL",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
         "install": {
           "choco": "choco install postgresql",
           "winget": "winget install postgresql",
@@ -203,8 +205,8 @@
         }
       },
       {
+        "id": "mysql",
         "name": "MySQL",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
         "install": {
           "choco": "choco install mysql",
           "winget": "winget install mysql",
@@ -216,8 +218,8 @@
         }
       },
       {
+        "id": "sqlite",
         "name": "SQLite",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
         "install": {
           "choco": "choco install sqlite",
           "winget": "winget install sqlite",
@@ -229,8 +231,8 @@
         }
       },
       {
+        "id": "mongodb",
         "name": "MongoDB",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
         "install": {
           "choco": "choco install mongodb",
           "winget": "winget install mongodb",
@@ -242,8 +244,8 @@
         }
       },
       {
+        "id": "redis",
         "name": "Redis",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
         "install": {
           "choco": "choco install redis",
           "winget": "winget install redis",
@@ -257,11 +259,12 @@
     ]
   },
   {
+    "id": "browser",
     "category": "Browser",
     "tools": [
       {
+        "id": "chrome",
         "name": "Chrome",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg",
         "install": {
           "choco": "choco install googlechrome",
           "winget": "winget install googlechrome",
@@ -273,8 +276,8 @@
         }
       },
       {
+        "id": "firefox",
         "name": "Firefox",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg",
         "install": {
           "choco": "choco install firefox",
           "winget": "winget install firefox",
@@ -286,8 +289,8 @@
         }
       },
       {
+        "id": "edge",
         "name": "Edge",
-        "iconsrc": "https://upload.wikimedia.org/wikipedia/commons/9/98/Microsoft_Edge_logo_%282019%29.svg",
         "install": {
           "choco": "choco install microsoft-edge",
           "winget": "winget install microsoft-edge",
@@ -299,26 +302,27 @@
         }
       },
       {
-  "name": "Brave",
-  "iconsrc": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/brave.svg",
-  "install": {
-    "choco": "choco install brave --pre",
-    "winget": "winget install --id=Brave.Brave -e",
-    "scoop": "scoop bucket add extras && scoop install extras/brave",
-    "apt": "sudo apt install curl && sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg && sudo curl -fsSLo /etc/apt/sources.list.d/brave-browser-release.sources https://brave-browser-apt-release.s3.brave.com/brave-browser.sources && sudo apt update && sudo apt install brave-browser",
-    "dnf": "sudo dnf install dnf-plugins-core && sudo dnf config-manager --add-repo=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo && sudo dnf install brave-browser",
-    "pacman": "sudo pacman -Sy brave-browser",
-        "homebrew": "brew install --cask brave-browser"
+        "id": "brave",
+        "name": "Brave",
+        "install": {
+          "choco": "choco install brave --pre ",
+          "winget": "winget install --id=Brave.Brave  -e",
+          "scoop": "scoop bucket add extras \nscoop install extras/brave",
+          "apt": "sudo apt install curl\n\nsudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg\n\nsudo curl -fsSLo /etc/apt/sources.list.d/brave-browser-release.sources https://brave-browser-apt-release.s3.brave.com/brave-browser.sources\n\nsudo apt update\n\nsudo apt install brave-browser",
+          "dnf": "sudo dnf install dnf-plugins-core  sudo dnf config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo  sudo dnf install brave-browser",
+          "pacman": "sudo pacman -Sy brave-browser",
+          "homebrew": "brew install --cask brave-browser"
+        }
       }
-    }
     ]
   },
   {
+    "id": "devops",
     "category": "DevOps",
     "tools": [
       {
+        "id": "docker",
         "name": "Docker",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
         "install": {
           "choco": "choco install docker-desktop",
           "winget": "winget install docker",
@@ -330,21 +334,21 @@
         }
       },
       {
+        "id": "kubernetes",
         "name": "Kubernetes",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
         "install": {
           "choco": "choco install kubernetes-cli",
           "winget": "winget install kubernetes-cli",
           "scoop": "scoop install kubernetes-cli",
           "apt": "sudo apt install kubectl",
-          "dnf": "sudo dnf install kubectl",
+          "dnf": "sudo dnf config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo",
           "pacman": "sudo pacman -S kubectl",
           "homebrew": "brew install kubectl"
         }
       },
       {
+        "id": "ansible",
         "name": "Ansible",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg",
         "install": {
           "choco": "choco install ansible",
           "winget": "winget install ansible",
@@ -358,24 +362,25 @@
     ]
   },
   {
+    "id": "cybersecurity",
     "category": "Cybersecurity",
     "tools": [
       {
+        "id": "nmap",
         "name": "Nmap",
-        "iconsrc": "https://nmap.org/images/nmap-logo-256x256.png",
         "install": {
           "choco": "choco install nmap",
           "winget": "winget install nmap",
           "scoop": "scoop install nmap",
           "apt": "sudo apt install nmap",
-          "dnf": "sudo dnf install nmap",
+          "dnf": "sudo dnf install brave-browser",
           "pacman": "sudo pacman -S nmap",
           "homebrew": "brew install nmap"
         }
       },
       {
+        "id": "wireshark",
         "name": "Wireshark",
-        "iconsrc": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/wireshark.svg",
         "install": {
           "choco": "choco install wireshark",
           "winget": "winget install wireshark",
@@ -389,61 +394,54 @@
     ]
   },
   {
-  "category": "Utilities",
-  "tools": [
-    {
-      "name": "VLC",
-      "iconsrc": "https://upload.wikimedia.org/wikipedia/commons/e/e6/VLC_Icon.svg",
-      "install": {
-        "choco": "choco install vlc",
-        "winget": "winget install --id=VideoLAN.VLC -e",
-        "scoop": "scoop bucket add extras && scoop install extras/vlc",
-        "apt": "sudo apt install vlc",
-        "dnf": "sudo dnf install vlc",
-        "pacman": "sudo pacman -S vlc",
-        "homebrew": "brew install --cask vlc"
+    "id": "utilties",
+    "category": "Utilties",
+    "tools": [
+      {
+        "id": "vlc",
+        "name": "Vlc",
+        "install": {
+          "choco": "choco install vlc",
+          "winget": "winget install --id=VideoLAN.VLC  -e",
+          "scoop": "scoop bucket add extras\nScoop install extras/vlc",
+          "apt": "sudo apt install vlc",
+          "dnf": "sudo dnf install vlc",
+          "pacman": "sudo pacman -S vlc",
+          "homebrew": "brew install --cask vlc"
+        }
+      },
+      {
+        "id": "obs_studio",
+        "name": "obs studio",
+        "install": {
+          "choco": "choco install obs-studio",
+          "winget": "winget install --id=OBSProject.OBSStudio  -e",
+          "scoop": "scoop bucket add extras\nscoop install extras/obs-studio",
+          "apt": "t: sudo apt install obs-studio",
+          "dnf": "sudo dnf install obs-studio",
+          "pacman": "sudo pacman -S obs-studio"
+        }
+      },
+      {
+        "id": "notion",
+        "name": "notion",
+        "install": {
+          "choco": "choco install notion",
+          "winget": "winget install --id=Notion.Notion  -e",
+          "scoop": "scoop bucket add extras\nscoop install extras/notion",
+          "homebrew": "brew install --cask notion"
+        }
+      },
+      {
+        "id": "ollama",
+        "name": "ollama",
+        "install": {
+          "choco": "choco install ollama",
+          "winget": "winget install --id=Ollama.Ollama  -e",
+          "scoop": "scoop bucket add main\nscoop install main/ollama",
+          "homebrew": "brew install ollama"
+        }
       }
-    },
-    {
-      "name": "OBS Studio",
-      "iconsrc": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/obsstudio.svg",
-      "install": {
-        "choco": "choco install obs-studio",
-        "winget": "winget install --id=OBSProject.OBSStudio -e",
-        "scoop": "scoop bucket add extras && scoop install extras/obs-studio",
-        "apt": "sudo apt install obs-studio",
-        "dnf": "sudo dnf install obs-studio",
-        "pacman": "sudo pacman -S obs-studio",
-        "homebrew": ""
-      }
-    },
-    {
-      "name": "Notion",
-      "iconsrc": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg",
-      "install": {
-        "choco": "choco install notion",
-        "winget": "winget install --id=Notion.Notion -e",
-        "scoop": "scoop bucket add extras && scoop install extras/notion",
-        "apt": "",
-        "dnf": "",
-        "pacman": "",
-        "homebrew": "brew install --cask notion"
-      }
-    },
-    {
-      "name": "Ollama",
-      "iconsrc": "https://ollama.com/public/ollama.png",
-      "install": {
-        "choco": "choco install ollama",
-        "winget": "winget install --id=Ollama.Ollama -e",
-        "scoop": "scoop bucket add main && scoop install main/ollama",
-        "apt": "",
-        "dnf": "",
-        "pacman": "",
-        "homebrew": "brew install ollama"
-      }
-    }
-  ]
-}
-
+    ]
+  }
 ]

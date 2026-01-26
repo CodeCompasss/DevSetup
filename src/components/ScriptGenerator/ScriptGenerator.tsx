@@ -13,7 +13,7 @@ import ActionButtons from "./ActionButtons";
 
 export default function ScriptGenerator() {
   const { theme, setTheme } = useTheme();
-  const { toolsData, loading } = useToolsData();
+  const { manifest, loadedCategories, loadCategory, loading } = useToolsData();
   const {
     selectedOS,
     selectedPkg,
@@ -28,7 +28,9 @@ export default function ScriptGenerator() {
     pkgManagers,
   } = useScriptGenerator();
 
-  const script = buildScript(toolsData);
+  // Combine all loaded tools for the script builder
+  const allLoadedTools = Object.values(loadedCategories);
+  const script = buildScript(allLoadedTools);
 
   const handleCopy = async () => {
     try {
@@ -43,15 +45,15 @@ export default function ScriptGenerator() {
     const blob = new Blob([script], { type: "text/plain" });
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
-    link.download = "install_script.sh";
+    link.download = `install_tools_${selectedOS}.sh`;
     link.click();
   };
 
-  if (loading)
+  if (loading && manifest.length === 0)
     return (
       <div className="text-[var(--foreground)] font-sans text-center mt-20">
-        <div>Loading tools data...</div>
-        <div className="spinner">⏳</div>
+        <div>Initializing DevSetup...</div>
+        <div className="spinner mt-4">⚙️</div>
       </div>
     );
 
@@ -62,7 +64,15 @@ export default function ScriptGenerator() {
         <SearchBox value={searchQuery} onChange={setSearchQuery} />
         <OSSelector options={osOptions} selectedOS={selectedOS} onSelect={resetSelections} />
         <PackageManagerSelector managers={pkgManagers[selectedOS]} selectedPkg={selectedPkg} onSelect={changePkg} />
-        <ToolGrid categories={toolsData} selectedPkg={selectedPkg} selectedTools={selectedTools} searchQuery={searchQuery} onToggleTool={toggleTool} />
+        <ToolGrid 
+          manifest={manifest} 
+          loadedCategories={loadedCategories}
+          loadCategory={loadCategory}
+          selectedPkg={selectedPkg} 
+          selectedTools={selectedTools} 
+          searchQuery={searchQuery} 
+          onToggleTool={toggleTool} 
+        />
         <ScriptOutput value={script} />
         <ActionButtons onCopy={handleCopy} onDownload={handleDownload} />
       </div>

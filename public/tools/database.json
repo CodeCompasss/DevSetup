@@ -1,0 +1,71 @@
+{
+  "id": "database",
+  "category": "Database",
+  "tools": [
+    {
+      "id": "postgresql",
+      "name": "PostgreSQL",
+      "install": {
+        "choco": "choco install postgresql",
+        "winget": "winget install postgresql",
+        "scoop": "scoop install postgresql",
+        "apt": "sudo apt install postgresql",
+        "dnf": "sudo dnf install postgresql",
+        "pacman": "sudo pacman -S postgresql",
+        "homebrew": "brew install postgresql"
+      }
+    },
+    {
+      "id": "mysql",
+      "name": "MySQL",
+      "install": {
+        "choco": "choco install mysql",
+        "winget": "winget install mysql",
+        "scoop": "scoop install mysql",
+        "apt": "sudo apt install mysql-server",
+        "dnf": "sudo dnf install mysql-server",
+        "pacman": "sudo pacman -S mysql",
+        "homebrew": "brew install mysql"
+      }
+    },
+    {
+      "id": "sqlite",
+      "name": "SQLite",
+      "install": {
+        "choco": "choco install sqlite",
+        "winget": "winget install sqlite",
+        "scoop": "scoop install sqlite",
+        "apt": "sudo apt install sqlite3",
+        "dnf": "sudo dnf install sqlite",
+        "pacman": "sudo pacman -S sqlite",
+        "homebrew": "brew install sqlite"
+      }
+    },
+    {
+      "id": "mongodb",
+      "name": "MongoDB",
+      "install": {
+        "choco": "choco install mongodb",
+        "winget": "winget install mongodb",
+        "scoop": "scoop install mongodb",
+        "apt": "sudo apt install mongodb",
+        "dnf": "sudo dnf install mongodb",
+        "pacman": "sudo pacman -S mongodb",
+        "homebrew": "brew install mongodb"
+      }
+    },
+    {
+      "id": "redis",
+      "name": "Redis",
+      "install": {
+        "choco": "choco install redis",
+        "winget": "winget install redis",
+        "scoop": "scoop install redis",
+        "apt": "sudo apt install redis-server",
+        "dnf": "sudo dnf install redis",
+        "pacman": "sudo pacman -S redis",
+        "homebrew": "brew install redis"
+      }
+    }
+  ]
+}

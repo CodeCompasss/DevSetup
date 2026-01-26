@@ -1,0 +1,51 @@
+{
+  "id": "utilties",
+  "category": "Utilties",
+  "tools": [
+    {
+      "id": "vlc",
+      "name": "Vlc",
+      "install": {
+        "choco": "choco install vlc",
+        "winget": "winget install --id=VideoLAN.VLC  -e",
+        "scoop": "scoop bucket add extras\nScoop install extras/vlc",
+        "apt": "sudo apt install vlc",
+        "dnf": "sudo dnf install vlc",
+        "pacman": "sudo pacman -S vlc",
+        "homebrew": "brew install --cask vlc"
+      }
+    },
+    {
+      "id": "obs_studio",
+      "name": "obs studio",
+      "install": {
+        "choco": "choco install obs-studio",
+        "winget": "winget install --id=OBSProject.OBSStudio  -e",
+        "scoop": "scoop bucket add extras\nscoop install extras/obs-studio",
+        "apt": "t: sudo apt install obs-studio",
+        "dnf": "sudo dnf install obs-studio",
+        "pacman": "sudo pacman -S obs-studio"
+      }
+    },
+    {
+      "id": "notion",
+      "name": "notion",
+      "install": {
+        "choco": "choco install notion",
+        "winget": "winget install --id=Notion.Notion  -e",
+        "scoop": "scoop bucket add extras\nscoop install extras/notion",
+        "homebrew": "brew install --cask notion"
+      }
+    },
+    {
+      "id": "ollama",
+      "name": "ollama",
+      "install": {
+        "choco": "choco install ollama",
+        "winget": "winget install --id=Ollama.Ollama  -e",
+        "scoop": "scoop bucket add main\nscoop install main/ollama",
+        "homebrew": "brew install ollama"
+      }
+    }
+  ]
+}

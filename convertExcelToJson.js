@@ -2,25 +2,33 @@ import  XLSX  from 'xlsx';
 import fs from 'fs';
 
 const convertExcelToJson = () => {
-  const workbook = XLSX.readFile('./public/tools.xlsx'); // Replace with your Excel file path
-  const sheetName = workbook.SheetNames[0]; // Assuming first sheet contains the data
+  const workbook = XLSX.readFile('./public/tools.xlsx'); 
+  const sheetName = workbook.SheetNames[0]; 
   const worksheet = workbook.Sheets[sheetName];
 
-  // Define the structure of each row
   const jsonData = XLSX.utils.sheet_to_json(worksheet, { defval: "" });
 
   const categoriesMap = {};
+  const toolsDir = './public/tools';
+
+  // Ensure tools directory exists
+  if (!fs.existsSync(toolsDir)){
+      fs.mkdirSync(toolsDir, { recursive: true });
+  }
 
   jsonData.forEach((row) => {
     const category = row.category || "Uncategorized";
+    const categoryId = category.toLowerCase().replace(/[^a-z0-9]/g, '_');
 
     if (!categoriesMap[category]) {
-      categoriesMap[category] = { category, tools: [] };
+      categoriesMap[category] = { 
+        id: categoryId,
+        category, 
+        tools: [] 
+      };
     }
 
     const install = {};
-
-    // Map the package managers and installation commands dynamically
     ['choco', 'winget', 'scoop', 'apt', 'dnf', 'pacman', 'homebrew'].forEach(pkg => {
       if (row[pkg]) {
         install[pkg] = row[pkg];
@@ -28,16 +36,35 @@ const convertExcelToJson = () => {
     });
 
     categoriesMap[category].tools.push({
+      id: row.name.toLowerCase().replace(/[^a-z0-9]/g, '_'),
       name: row.name,
       iconsrc: row.iconsrc,
       install,
     });
   });
 
-  // Write the JSON data to a file
+  const categoryList = [];
+
+  // Write individual category files and build manifest
+  Object.values(categoriesMap).forEach(categoryData => {
+    const fileName = `${categoryData.id}.json`;
+    fs.writeFileSync(`${toolsDir}/${fileName}`, JSON.stringify(categoryData, null, 2));
+    
+    categoryList.push({
+      id: categoryData.id,
+      name: categoryData.category,
+      file: `/tools/${fileName}`,
+      count: categoryData.tools.length
+    });
+  });
+
+  // Write manifest file
+  fs.writeFileSync('./public/tools/manifest.json', JSON.stringify(categoryList, null, 2));
+
+  // Keep tools.json for backward compatibility (optional but recommended for now)
   fs.writeFileSync('./public/tools.json', JSON.stringify(Object.values(categoriesMap), null, 2));
 
-  console.log("Excel file has been converted to JSON.");
+  console.log(`Successfully sharded ${jsonData.length} tools into ${categoryList.length} categories.`);
 };
 
 convertExcelToJson();

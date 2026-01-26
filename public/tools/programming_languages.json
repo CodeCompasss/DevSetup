@@ -1,0 +1,188 @@
+{
+  "id": "programming_languages",
+  "category": "Programming Languages",
+  "tools": [
+    {
+      "id": "python",
+      "name": "Python",
+      "install": {
+        "choco": "choco install python",
+        "winget": "winget install Python",
+        "scoop": "scoop install python",
+        "apt": "sudo apt install python3 -y",
+        "dnf": "sudo dnf install python3",
+        "pacman": "sudo pacman -S python",
+        "homebrew": "brew install python"
+      }
+    },
+    {
+      "id": "c",
+      "name": "C",
+      "install": {
+        "choco": "choco install gcc",
+        "winget": "winget install gcc",
+        "scoop": "scoop install gcc",
+        "apt": "sudo apt install build-essential",
+        "dnf": "sudo dnf install gcc",
+        "pacman": "sudo pacman -S gcc",
+        "homebrew": "brew install gcc"
+      }
+    },
+    {
+      "id": "c__",
+      "name": "C++",
+      "install": {
+        "choco": "choco install gcc",
+        "winget": "winget install gcc",
+        "scoop": "scoop install gcc",
+        "apt": "sudo apt install g++ -y",
+        "dnf": "sudo dnf install gcc-c++",
+        "pacman": "sudo pacman -S gcc",
+        "homebrew": "brew install gcc"
+      }
+    },
+    {
+      "id": "rust",
+      "name": "Rust",
+      "install": {
+        "choco": "choco install rust",
+        "winget": "winget install rust",
+        "scoop": "scoop install rust",
+        "apt": "sudo apt install rustc -y",
+        "dnf": "sudo dnf install rust",
+        "pacman": "sudo pacman -S rust",
+        "homebrew": "brew install rust"
+      }
+    },
+    {
+      "id": "go",
+      "name": "Go",
+      "install": {
+        "choco": "choco install golang",
+        "winget": "winget install golang",
+        "scoop": "scoop install golang",
+        "apt": "sudo apt install golang -y",
+        "dnf": "sudo dnf install golang",
+        "pacman": "sudo pacman -S go",
+        "homebrew": "brew install go"
+      }
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "install": {
+        "choco": "choco install openjdk",
+        "winget": "winget install openjdk",
+        "scoop": "scoop install openjdk",
+        "apt": "sudo apt install openjdk-11-jdk",
+        "dnf": "sudo dnf install java-11-openjdk",
+        "pacman": "sudo pacman -S jdk-openjdk",
+        "homebrew": "brew install openjdk"
+      }
+    },
+    {
+      "id": "kotlin",
+      "name": "Kotlin",
+      "install": {
+        "choco": "choco install kotlin",
+        "winget": "winget install kotlin",
+        "scoop": "scoop install kotlin",
+        "apt": "sudo apt install kotlin",
+        "dnf": "sudo dnf install kotlin",
+        "pacman": "sudo pacman -S kotlin",
+        "homebrew": "brew install kotlin"
+      }
+    },
+    {
+      "id": "r",
+      "name": "R",
+      "install": {
+        "choco": "choco install r",
+        "winget": "winget install r",
+        "scoop": "scoop install r",
+        "apt": "sudo apt install r-base",
+        "dnf": "sudo dnf install R",
+        "pacman": "sudo pacman -S r",
+        "homebrew": "brew install r"
+      }
+    },
+    {
+      "id": "ruby",
+      "name": "Ruby",
+      "install": {
+        "choco": "choco install ruby",
+        "winget": "winget install ruby",
+        "scoop": "scoop install ruby",
+        "apt": "sudo apt install ruby",
+        "dnf": "sudo dnf install ruby",
+        "pacman": "sudo pacman -S ruby",
+        "homebrew": "brew install ruby"
+      }
+    },
+    {
+      "id": "perl",
+      "name": "Perl",
+      "install": {
+        "choco": "choco install perl",
+        "winget": "winget install perl",
+        "scoop": "scoop install perl",
+        "apt": "sudo apt install perl",
+        "dnf": "sudo dnf install perl",
+        "pacman": "sudo pacman -S perl",
+        "homebrew": "brew install perl"
+      }
+    },
+    {
+      "id": "lua",
+      "name": "Lua",
+      "install": {
+        "choco": "choco install lua",
+        "winget": "winget install lua",
+        "scoop": "scoop install lua",
+        "apt": "sudo apt install lua5.3",
+        "dnf": "sudo dnf install lua",
+        "pacman": "sudo pacman -S lua",
+        "homebrew": "brew install lua"
+      }
+    },
+    {
+      "id": "haskell",
+      "name": "Haskell",
+      "install": {
+        "choco": "choco install haskell",
+        "winget": "winget install haskell",
+        "scoop": "scoop install haskell",
+        "apt": "sudo apt install haskell-platform",
+        "dnf": "sudo dnf install ghc",
+        "pacman": "sudo pacman -S ghc",
+        "homebrew": "brew install haskell"
+      }
+    },
+    {
+      "id": "dart",
+      "name": "Dart",
+      "install": {
+        "choco": "choco install dart-sdk",
+        "winget": "winget install dart-sdk",
+        "scoop": "scoop install dart-sdk",
+        "apt": "sudo apt install dart",
+        "dnf": "sudo dnf install dart",
+        "pacman": "sudo pacman -S dart",
+        "homebrew": "brew install dart"
+      }
+    },
+    {
+      "id": "node_js",
+      "name": "Node.js",
+      "install": {
+        "choco": "choco install nodejs",
+        "winget": "winget install nodejs",
+        "scoop": "scoop install nodejs",
+        "apt": "sudo apt install nodejs -y",
+        "dnf": "sudo dnf install nodejs",
+        "pacman": "sudo pacman -S nodejs",
+        "homebrew": "brew install node"
+      }
+    }
+  ]
+}

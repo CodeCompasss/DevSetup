@@ -1,25 +1,40 @@
-import { useEffect, useState } from "react";
-import { ToolCategory } from "../lib/types";
+import { useEffect, useState, useCallback } from "react";
+import { ToolCategory, CategoryManifest } from "../lib/types";
 
 export function useToolsData() {
-  const [toolsData, setToolsData] = useState<ToolCategory[]>([]);
+  const [manifest, setManifest] = useState<CategoryManifest[]>([]);
+  const [loadedCategories, setLoadedCategories] = useState<Record<string, ToolCategory>>({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchTools = async () => {
+    const fetchManifest = async () => {
       try {
-        const res = await fetch("./tools.json");
-        if (!res.ok) throw new Error("Failed to fetch JSON");
-        const data: ToolCategory[] = await res.json();
-        setToolsData(data);
-      } catch {
-        alert("Failed to load tool data.");
+        setLoading(true);
+        const res = await fetch("./tools/manifest.json");
+        if (!res.ok) throw new Error("Failed to fetch manifest");
+        const data: CategoryManifest[] = await res.json();
+        setManifest(data);
+      } catch (error) {
+        console.error("Error loading manifest:", error);
       } finally {
         setLoading(false);
       }
     };
-    fetchTools();
+    fetchManifest();
   }, []);
 
-  return { toolsData, loading };
+  const loadCategory = useCallback(async (cat: CategoryManifest) => {
+    if (loadedCategories[cat.id]) return; // Already loaded
+
+    try {
+      const res = await fetch(`.${cat.file}`);
+      if (!res.ok) return;
+      const data: ToolCategory = await res.json();
+      setLoadedCategories(prev => ({ ...prev, [cat.id]: data }));
+    } catch (error) {
+      console.error(`Failed to load category ${cat.id}:`, error);
+    }
+  }, [loadedCategories]);
+
+  return { manifest, loadedCategories, loadCategory, loading };
 }
