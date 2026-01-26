@@ -1,0 +1,149 @@
+{
+  "id": "vs_code_extensions",
+  "category": "VS Code Extensions",
+  "tools": [
+    {
+      "id": "prettier",
+      "name": "Prettier",
+      "install": {
+        "choco": "choco install prettier",
+        "winget": "winget install Prettier",
+        "scoop": "scoop install prettier",
+        "apt": "sudo apt install prettier -y",
+        "dnf": "sudo dnf install prettier",
+        "pacman": "sudo pacman -S prettier",
+        "homebrew": "brew install prettier"
+      }
+    },
+    {
+      "id": "eslint",
+      "name": "ESLint",
+      "install": {
+        "choco": "choco install eslint",
+        "winget": "winget install ESLint",
+        "scoop": "scoop install eslint",
+        "apt": "sudo apt install eslint -y",
+        "dnf": "sudo dnf install eslint",
+        "pacman": "sudo pacman -S eslint",
+        "homebrew": "brew install eslint"
+      }
+    },
+    {
+      "id": "path_intellisense",
+      "name": "Path Intellisense",
+      "install": {
+        "choco": "choco install path-intellisense",
+        "winget": "winget install Path Intellisense",
+        "scoop": "scoop install path-intellisense",
+        "apt": "sudo apt install path-intellisense -y",
+        "dnf": "sudo dnf install path-intellisense",
+        "pacman": "sudo pacman -S path-intellisense",
+        "homebrew": "brew install path-intellisense"
+      }
+    },
+    {
+      "id": "auto_rename_tag",
+      "name": "Auto Rename Tag",
+      "install": {
+        "choco": "choco install auto-rename-tag",
+        "winget": "winget install Auto Rename Tag",
+        "scoop": "scoop install auto-rename-tag",
+        "apt": "sudo apt install auto-rename-tag -y",
+        "dnf": "sudo dnf install auto-rename-tag",
+        "pacman": "sudo pacman -S auto-rename-tag",
+        "homebrew": "brew install auto-rename-tag"
+      }
+    },
+    {
+      "id": "todo_highlight",
+      "name": "TODO Highlight",
+      "install": {
+        "choco": "choco install todo-highlight",
+        "winget": "winget install TODO Highlight",
+        "scoop": "scoop install todo-highlight",
+        "apt": "sudo apt install todo-highlight -y",
+        "dnf": "sudo dnf install todo-highlight",
+        "pacman": "sudo pacman -S todo-highlight",
+        "homebrew": "brew install todo-highlight"
+      }
+    },
+    {
+      "id": "todo_tree",
+      "name": "Todo Tree",
+      "install": {
+        "choco": "choco install todo-tree",
+        "winget": "winget install Todo Tree",
+        "scoop": "scoop install todo-tree",
+        "apt": "sudo apt install todo-tree -y",
+        "dnf": "sudo dnf install todo-tree",
+        "pacman": "sudo pacman -S todo-tree",
+        "homebrew": "brew install todo-tree"
+      }
+    },
+    {
+      "id": "gitlens",
+      "name": "GitLens",
+      "install": {
+        "choco": "choco install gitlens",
+        "winget": "winget install GitLens",
+        "scoop": "scoop install gitlens",
+        "apt": "sudo apt install gitlens -y",
+        "dnf": "sudo dnf install gitlens",
+        "pacman": "sudo pacman -S gitlens",
+        "homebrew": "brew install gitlens"
+      }
+    },
+    {
+      "id": "error_lens",
+      "name": "Error Lens",
+      "install": {
+        "choco": "choco install error-lens",
+        "winget": "winget install Error Lens",
+        "scoop": "scoop install error-lens",
+        "apt": "sudo apt install error-lens -y",
+        "dnf": "sudo dnf install error-lens",
+        "pacman": "sudo pacman -S error-lens",
+        "homebrew": "brew install error-lens"
+      }
+    },
+    {
+      "id": "material_icon_theme",
+      "name": "Material Icon Theme",
+      "install": {
+        "choco": "choco install material-icon-theme",
+        "winget": "winget install Material Icon Theme",
+        "scoop": "scoop install material-icon-theme",
+        "apt": "sudo apt install material-icon-theme -y",
+        "dnf": "sudo dnf install material-icon-theme",
+        "pacman": "sudo pacman -S material-icon-theme",
+        "homebrew": "brew install material-icon-theme"
+      }
+    },
+    {
+      "id": "remote___ssh",
+      "name": "Remote - SSH",
+      "install": {
+        "choco": "choco install remote---ssh",
+        "winget": "winget install Remote - SSH",
+        "scoop": "scoop install remote---ssh",
+        "apt": "sudo apt install remote---ssh -y",
+        "dnf": "sudo dnf install remote---ssh",
+        "pacman": "sudo pacman -S remote---ssh",
+        "homebrew": "brew install remote---ssh"
+      }
+    },
+    {
+      "id": "live_server",
+      "name": "Live Server",
+      "install": {
+        "choco": "choco install live-server",
+        "winget": "winget install Live Server",
+        "scoop": "scoop install live-server",
+        "apt": "sudo apt install live-server -y",
+        "dnf": "sudo dnf install live-server",
+        "pacman": "sudo pacman -S live-server",
+        "homebrew": "brew install live-server"
+      }
+    }
+  ]
+}

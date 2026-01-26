@@ -1,0 +1,240 @@
+{
+  "id": "modern_cli_essentials",
+  "category": "Modern CLI Essentials",
+  "tools": [
+    {
+      "id": "bat",
+      "name": "bat",
+      "install": {
+        "choco": "choco install bat",
+        "winget": "winget install bat",
+        "scoop": "scoop install bat",
+        "apt": "sudo apt install bat -y",
+        "dnf": "sudo dnf install bat",
+        "pacman": "sudo pacman -S bat",
+        "homebrew": "brew install bat"
+      }
+    },
+    {
+      "id": "eza",
+      "name": "eza",
+      "install": {
+        "choco": "choco install eza",
+        "winget": "winget install eza",
+        "scoop": "scoop install eza",
+        "apt": "sudo apt install eza -y",
+        "dnf": "sudo dnf install eza",
+        "pacman": "sudo pacman -S eza",
+        "homebrew": "brew install eza"
+      }
+    },
+    {
+      "id": "fd_find",
+      "name": "fd-find",
+      "install": {
+        "choco": "choco install fd-find",
+        "winget": "winget install fd-find",
+        "scoop": "scoop install fd-find",
+        "apt": "sudo apt install fd-find -y",
+        "dnf": "sudo dnf install fd-find",
+        "pacman": "sudo pacman -S fd-find",
+        "homebrew": "brew install fd-find"
+      }
+    },
+    {
+      "id": "fzf",
+      "name": "fzf",
+      "install": {
+        "choco": "choco install fzf",
+        "winget": "winget install fzf",
+        "scoop": "scoop install fzf",
+        "apt": "sudo apt install fzf -y",
+        "dnf": "sudo dnf install fzf",
+        "pacman": "sudo pacman -S fzf",
+        "homebrew": "brew install fzf"
+      }
+    },
+    {
+      "id": "ripgrep__rg_",
+      "name": "ripgrep (rg)",
+      "install": {
+        "choco": "choco install ripgrep-rg",
+        "winget": "winget install ripgrep (rg)",
+        "scoop": "scoop install ripgrep-rg",
+        "apt": "sudo apt install ripgrep-rg -y",
+        "dnf": "sudo dnf install ripgrep-rg",
+        "pacman": "sudo pacman -S ripgrep-rg",
+        "homebrew": "brew install ripgrep-rg"
+      }
+    },
+    {
+      "id": "zoxide",
+      "name": "zoxide",
+      "install": {
+        "choco": "choco install zoxide",
+        "winget": "winget install zoxide",
+        "scoop": "scoop install zoxide",
+        "apt": "sudo apt install zoxide -y",
+        "dnf": "sudo dnf install zoxide",
+        "pacman": "sudo pacman -S zoxide",
+        "homebrew": "brew install zoxide"
+      }
+    },
+    {
+      "id": "tldr",
+      "name": "tldr",
+      "install": {
+        "choco": "choco install tldr",
+        "winget": "winget install tldr",
+        "scoop": "scoop install tldr",
+        "apt": "sudo apt install tldr -y",
+        "dnf": "sudo dnf install tldr",
+        "pacman": "sudo pacman -S tldr",
+        "homebrew": "brew install tldr"
+      }
+    },
+    {
+      "id": "btop",
+      "name": "btop",
+      "install": {
+        "choco": "choco install btop",
+        "winget": "winget install btop",
+        "scoop": "scoop install btop",
+        "apt": "sudo apt install btop -y",
+        "dnf": "sudo dnf install btop",
+        "pacman": "sudo pacman -S btop",
+        "homebrew": "brew install btop"
+      }
+    },
+    {
+      "id": "plocate",
+      "name": "plocate",
+      "install": {
+        "choco": "choco install plocate",
+        "winget": "winget install plocate",
+        "scoop": "scoop install plocate",
+        "apt": "sudo apt install plocate -y",
+        "dnf": "sudo dnf install plocate",
+        "pacman": "sudo pacman -S plocate",
+        "homebrew": "brew install plocate"
+      }
+    },
+    {
+      "id": "rsync",
+      "name": "rsync",
+      "install": {
+        "choco": "choco install rsync",
+        "winget": "winget install rsync",
+        "scoop": "scoop install rsync",
+        "apt": "sudo apt install rsync -y",
+        "dnf": "sudo dnf install rsync",
+        "pacman": "sudo pacman -S rsync",
+        "homebrew": "brew install rsync"
+      }
+    },
+    {
+      "id": "tree",
+      "name": "tree",
+      "install": {
+        "choco": "choco install tree",
+        "winget": "winget install tree",
+        "scoop": "scoop install tree",
+        "apt": "sudo apt install tree -y",
+        "dnf": "sudo dnf install tree",
+        "pacman": "sudo pacman -S tree",
+        "homebrew": "brew install tree"
+      }
+    },
+    {
+      "id": "aria2",
+      "name": "aria2",
+      "install": {
+        "choco": "choco install aria2",
+        "winget": "winget install aria2",
+        "scoop": "scoop install aria2",
+        "apt": "sudo apt install aria2 -y",
+        "dnf": "sudo dnf install aria2",
+        "pacman": "sudo pacman -S aria2",
+        "homebrew": "brew install aria2"
+      }
+    },
+    {
+      "id": "ffmpeg",
+      "name": "ffmpeg",
+      "install": {
+        "choco": "choco install ffmpeg",
+        "winget": "winget install ffmpeg",
+        "scoop": "scoop install ffmpeg",
+        "apt": "sudo apt install ffmpeg -y",
+        "dnf": "sudo dnf install ffmpeg",
+        "pacman": "sudo pacman -S ffmpeg",
+        "homebrew": "brew install ffmpeg"
+      }
+    },
+    {
+      "id": "jdupes",
+      "name": "jdupes",
+      "install": {
+        "choco": "choco install jdupes",
+        "winget": "winget install jdupes",
+        "scoop": "scoop install jdupes",
+        "apt": "sudo apt install jdupes -y",
+        "dnf": "sudo dnf install jdupes",
+        "pacman": "sudo pacman -S jdupes",
+        "homebrew": "brew install jdupes"
+      }
+    },
+    {
+      "id": "mc__midnight_commander_",
+      "name": "mc (Midnight Commander)",
+      "install": {
+        "choco": "choco install mc-midnight-commander",
+        "winget": "winget install mc (Midnight Commander)",
+        "scoop": "scoop install mc-midnight-commander",
+        "apt": "sudo apt install mc-midnight-commander -y",
+        "dnf": "sudo dnf install mc-midnight-commander",
+        "pacman": "sudo pacman -S mc-midnight-commander",
+        "homebrew": "brew install mc-midnight-commander"
+      }
+    },
+    {
+      "id": "pandoc",
+      "name": "pandoc",
+      "install": {
+        "choco": "choco install pandoc",
+        "winget": "winget install pandoc",
+        "scoop": "scoop install pandoc",
+        "apt": "sudo apt install pandoc -y",
+        "dnf": "sudo dnf install pandoc",
+        "pacman": "sudo pacman -S pandoc",
+        "homebrew": "brew install pandoc"
+      }
+    },
+    {
+      "id": "samba",
+      "name": "samba",
+      "install": {
+        "choco": "choco install samba",
+        "winget": "winget install samba",
+        "scoop": "scoop install samba",
+        "apt": "sudo apt install samba -y",
+        "dnf": "sudo dnf install samba",
+        "pacman": "sudo pacman -S samba",
+        "homebrew": "brew install samba"
+      }
+    },
+    {
+      "id": "apache2_utils",
+      "name": "apache2-utils",
+      "install": {
+        "choco": "choco install apache2-utils",
+        "winget": "winget install apache2-utils",
+        "scoop": "scoop install apache2-utils",
+        "apt": "sudo apt install apache2-utils -y",
+        "dnf": "sudo dnf install apache2-utils",
+        "pacman": "sudo pacman -S apache2-utils",
+        "homebrew": "brew install apache2-utils"
+      }
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "lowlevel___build_tools",
+  "category": "LowLevel & Build Tools",
+  "tools": [
+    {
+      "id": "bison",
+      "name": "Bison",
+      "install": {
+        "choco": "choco install bison",
+        "winget": "winget install Bison",
+        "scoop": "scoop install bison",
+        "apt": "sudo apt install bison -y",
+        "dnf": "sudo dnf install bison",
+        "pacman": "sudo pacman -S bison",
+        "homebrew": "brew install bison"
+      }
+    },
+    {
+      "id": "flex",
+      "name": "Flex",
+      "install": {
+        "choco": "choco install flex",
+        "winget": "winget install Flex",
+        "scoop": "scoop install flex",
+        "apt": "sudo apt install flex -y",
+        "dnf": "sudo dnf install flex",
+        "pacman": "sudo pacman -S flex",
+        "homebrew": "brew install flex"
+      }
+    },
+    {
+      "id": "nasm",
+      "name": "NASM",
+      "install": {
+        "choco": "choco install nasm",
+        "winget": "winget install NASM",
+        "scoop": "scoop install nasm",
+        "apt": "sudo apt install nasm -y",
+        "dnf": "sudo dnf install nasm",
+        "pacman": "sudo pacman -S nasm",
+        "homebrew": "brew install nasm"
+      }
+    },
+    {
+      "id": "doxygen",
+      "name": "Doxygen",
+      "install": {
+        "choco": "choco install doxygen",
+        "winget": "winget install Doxygen",
+        "scoop": "scoop install doxygen",
+        "apt": "sudo apt install doxygen -y",
+        "dnf": "sudo dnf install doxygen",
+        "pacman": "sudo pacman -S doxygen",
+        "homebrew": "brew install doxygen"
+      }
+    }
+  ]
+}

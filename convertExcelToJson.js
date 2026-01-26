@@ -61,9 +61,6 @@ const convertExcelToJson = () => {
   // Write manifest file
   fs.writeFileSync('./public/tools/manifest.json', JSON.stringify(categoryList, null, 2));
 
-  // Keep tools.json for backward compatibility (optional but recommended for now)
-  fs.writeFileSync('./public/tools.json', JSON.stringify(Object.values(categoriesMap), null, 2));
-
   console.log(`Successfully sharded ${jsonData.length} tools into ${categoryList.length} categories.`);
 };
 

@@ -1,0 +1,45 @@
+{
+  "id": "cybersecurity_essentials_for_engineers",
+  "category": "Cybersecurity Essentials for Engineers",
+  "tools": [
+    {
+      "id": "burp_suite__community_",
+      "name": "Burp Suite (Community)",
+      "install": {
+        "choco": "choco install burp-suite-community",
+        "winget": "winget install Burp Suite (Community)",
+        "scoop": "scoop install burp-suite-community",
+        "apt": "sudo apt install burp-suite-community -y",
+        "dnf": "sudo dnf install burp-suite-community",
+        "pacman": "sudo pacman -S burp-suite-community",
+        "homebrew": "brew install burp-suite-community"
+      }
+    },
+    {
+      "id": "gobuster",
+      "name": "Gobuster",
+      "install": {
+        "choco": "choco install gobuster",
+        "winget": "winget install Gobuster",
+        "scoop": "scoop install gobuster",
+        "apt": "sudo apt install gobuster -y",
+        "dnf": "sudo dnf install gobuster",
+        "pacman": "sudo pacman -S gobuster",
+        "homebrew": "brew install gobuster"
+      }
+    },
+    {
+      "id": "nikto",
+      "name": "Nikto",
+      "install": {
+        "choco": "choco install nikto",
+        "winget": "winget install Nikto",
+        "scoop": "scoop install nikto",
+        "apt": "sudo apt install nikto -y",
+        "dnf": "sudo dnf install nikto",
+        "pacman": "sudo pacman -S nikto",
+        "homebrew": "brew install nikto"
+      }
+    }
+  ]
+}

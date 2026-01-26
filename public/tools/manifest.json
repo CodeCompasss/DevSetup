@@ -34,5 +34,71 @@
     "name": "Utilties",
     "file": "/tools/utilties.json",
     "count": 4
+  },
+  {
+    "id": "desktop_applications___gui_tools",
+    "name": "Desktop Applications & GUI Tools",
+    "file": "/tools/desktop_applications___gui_tools.json",
+    "count": 13
+  },
+  {
+    "id": "data___specialized_ides",
+    "name": "Data & Specialized IDEs",
+    "file": "/tools/data___specialized_ides.json",
+    "count": 2
+  },
+  {
+    "id": "system_utilities",
+    "name": "System Utilities",
+    "file": "/tools/system_utilities.json",
+    "count": 1
+  },
+  {
+    "id": "modern_cli_essentials",
+    "name": "Modern CLI Essentials",
+    "file": "/tools/modern_cli_essentials.json",
+    "count": 18
+  },
+  {
+    "id": "terminal_ui_tui___multiplexers",
+    "name": "Terminal UI TUI & Multiplexers",
+    "file": "/tools/terminal_ui_tui___multiplexers.json",
+    "count": 6
+  },
+  {
+    "id": "runtimes___sdks",
+    "name": "Runtimes & SDKs",
+    "file": "/tools/runtimes___sdks.json",
+    "count": 3
+  },
+  {
+    "id": "lowlevel___build_tools",
+    "name": "LowLevel & Build Tools",
+    "file": "/tools/lowlevel___build_tools.json",
+    "count": 4
+  },
+  {
+    "id": "cybersecurity_essentials_for_engineers",
+    "name": "Cybersecurity Essentials for Engineers",
+    "file": "/tools/cybersecurity_essentials_for_engineers.json",
+    "count": 3
+  },
+  {
+    "id": "devops___cloud_infrastructure",
+    "name": "DevOps & Cloud Infrastructure",
+    "file": "/tools/devops___cloud_infrastructure.json",
+    "count": 4
+  },
+  {
+    "id": "web_browsers",
+    "name": "Web Browsers",
+    "file": "/tools/web_browsers.json",
+    "count": 3
+  },
+  {
+    "id": "vs_code_extensions",
+    "name": "VS Code Extensions",
+    "file": "/tools/vs_code_extensions.json",
+    "count": 11
   }
 ]

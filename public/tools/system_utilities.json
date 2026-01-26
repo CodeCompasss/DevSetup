@@ -1,0 +1,19 @@
+{
+  "id": "system_utilities",
+  "category": "System Utilities",
+  "tools": [
+    {
+      "id": "tlp",
+      "name": "TLP",
+      "install": {
+        "choco": "choco install tlp",
+        "winget": "winget install TLP",
+        "scoop": "scoop install tlp",
+        "apt": "sudo apt install tlp -y",
+        "dnf": "sudo dnf install tlp",
+        "pacman": "sudo pacman -S tlp",
+        "homebrew": "brew install tlp"
+      }
+    }
+  ]
+}

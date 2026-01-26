@@ -1,0 +1,32 @@
+{
+  "id": "data___specialized_ides",
+  "category": "Data & Specialized IDEs",
+  "tools": [
+    {
+      "id": "mysql_workbench",
+      "name": "MySQL Workbench",
+      "install": {
+        "choco": "choco install mysql-workbench",
+        "winget": "winget install MySQL Workbench",
+        "scoop": "scoop install mysql-workbench",
+        "apt": "sudo apt install mysql-workbench -y",
+        "dnf": "sudo dnf install mysql-workbench",
+        "pacman": "sudo pacman -S mysql-workbench",
+        "homebrew": "brew install mysql-workbench"
+      }
+    },
+    {
+      "id": "spyder",
+      "name": "Spyder",
+      "install": {
+        "choco": "choco install spyder",
+        "winget": "winget install Spyder",
+        "scoop": "scoop install spyder",
+        "apt": "sudo apt install spyder -y",
+        "dnf": "sudo dnf install spyder",
+        "pacman": "sudo pacman -S spyder",
+        "homebrew": "brew install spyder"
+      }
+    }
+  ]
+}

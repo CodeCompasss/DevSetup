@@ -1,0 +1,84 @@
+{
+  "id": "terminal_ui_tui___multiplexers",
+  "category": "Terminal UI TUI & Multiplexers",
+  "tools": [
+    {
+      "id": "github_cli__gh_",
+      "name": "GitHub CLI (gh)",
+      "install": {
+        "choco": "choco install github-cli-gh",
+        "winget": "winget install GitHub CLI (gh)",
+        "scoop": "scoop install github-cli-gh",
+        "apt": "sudo apt install github-cli-gh -y",
+        "dnf": "sudo dnf install github-cli-gh",
+        "pacman": "sudo pacman -S github-cli-gh",
+        "homebrew": "brew install github-cli-gh"
+      }
+    },
+    {
+      "id": "lazygit",
+      "name": "lazygit",
+      "install": {
+        "choco": "choco install lazygit",
+        "winget": "winget install lazygit",
+        "scoop": "scoop install lazygit",
+        "apt": "sudo apt install lazygit -y",
+        "dnf": "sudo dnf install lazygit",
+        "pacman": "sudo pacman -S lazygit",
+        "homebrew": "brew install lazygit"
+      }
+    },
+    {
+      "id": "lazydocker",
+      "name": "lazydocker",
+      "install": {
+        "choco": "choco install lazydocker",
+        "winget": "winget install lazydocker",
+        "scoop": "scoop install lazydocker",
+        "apt": "sudo apt install lazydocker -y",
+        "dnf": "sudo dnf install lazydocker",
+        "pacman": "sudo pacman -S lazydocker",
+        "homebrew": "brew install lazydocker"
+      }
+    },
+    {
+      "id": "zellij",
+      "name": "zellij",
+      "install": {
+        "choco": "choco install zellij",
+        "winget": "winget install zellij",
+        "scoop": "scoop install zellij",
+        "apt": "sudo apt install zellij -y",
+        "dnf": "sudo dnf install zellij",
+        "pacman": "sudo pacman -S zellij",
+        "homebrew": "brew install zellij"
+      }
+    },
+    {
+      "id": "tmux",
+      "name": "tmux",
+      "install": {
+        "choco": "choco install tmux",
+        "winget": "winget install tmux",
+        "scoop": "scoop install tmux",
+        "apt": "sudo apt install tmux -y",
+        "dnf": "sudo dnf install tmux",
+        "pacman": "sudo pacman -S tmux",
+        "homebrew": "brew install tmux"
+      }
+    },
+    {
+      "id": "neovim",
+      "name": "neovim",
+      "install": {
+        "choco": "choco install neovim",
+        "winget": "winget install neovim",
+        "scoop": "scoop install neovim",
+        "apt": "sudo apt install neovim -y",
+        "dnf": "sudo dnf install neovim",
+        "pacman": "sudo pacman -S neovim",
+        "homebrew": "brew install neovim"
+      }
+    }
+  ]
+}

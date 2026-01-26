@@ -1,0 +1,175 @@
+{
+  "id": "desktop_applications___gui_tools",
+  "category": "Desktop Applications & GUI Tools",
+  "tools": [
+    {
+      "id": "alacritty",
+      "name": "Alacritty",
+      "install": {
+        "choco": "choco install alacritty",
+        "winget": "winget install Alacritty",
+        "scoop": "scoop install alacritty",
+        "apt": "sudo apt install alacritty -y",
+        "dnf": "sudo dnf install alacritty",
+        "pacman": "sudo pacman -S alacritty",
+        "homebrew": "brew install alacritty"
+      }
+    },
+    {
+      "id": "vs_code",
+      "name": "VS Code",
+      "install": {
+        "choco": "choco install vscode",
+        "winget": "winget install Microsoft.VisualStudioCode",
+        "scoop": "scoop install vs-code",
+        "apt": "sudo apt install code",
+        "dnf": "sudo dnf install vs-code",
+        "pacman": "sudo pacman -S vs-code",
+        "homebrew": "brew install --cask visual-studio-code"
+      }
+    },
+    {
+      "id": "obsidian",
+      "name": "Obsidian",
+      "install": {
+        "choco": "choco install obsidian",
+        "winget": "winget install Obsidian",
+        "scoop": "scoop install obsidian",
+        "apt": "sudo apt install obsidian -y",
+        "dnf": "sudo dnf install obsidian",
+        "pacman": "sudo pacman -S obsidian",
+        "homebrew": "brew install obsidian"
+      }
+    },
+    {
+      "id": "flameshot",
+      "name": "Flameshot",
+      "install": {
+        "choco": "choco install flameshot",
+        "winget": "winget install Flameshot",
+        "scoop": "scoop install flameshot",
+        "apt": "sudo apt install flameshot -y",
+        "dnf": "sudo dnf install flameshot",
+        "pacman": "sudo pacman -S flameshot",
+        "homebrew": "brew install flameshot"
+      }
+    },
+    {
+      "id": "stacer",
+      "name": "Stacer",
+      "install": {
+        "choco": "choco install stacer",
+        "winget": "winget install Stacer",
+        "scoop": "scoop install stacer",
+        "apt": "sudo apt install stacer -y",
+        "dnf": "sudo dnf install stacer",
+        "pacman": "sudo pacman -S stacer",
+        "homebrew": "brew install stacer"
+      }
+    },
+    {
+      "id": "timeshift",
+      "name": "Timeshift",
+      "install": {
+        "choco": "choco install timeshift",
+        "winget": "winget install Timeshift",
+        "scoop": "scoop install timeshift",
+        "apt": "sudo apt install timeshift -y",
+        "dnf": "sudo dnf install timeshift",
+        "pacman": "sudo pacman -S timeshift",
+        "homebrew": "brew install timeshift"
+      }
+    },
+    {
+      "id": "localsend",
+      "name": "LocalSend",
+      "install": {
+        "choco": "choco install localsend",
+        "winget": "winget install LocalSend",
+        "scoop": "scoop install localsend",
+        "apt": "sudo apt install localsend -y",
+        "dnf": "sudo dnf install localsend",
+        "pacman": "sudo pacman -S localsend",
+        "homebrew": "brew install localsend"
+      }
+    },
+    {
+      "id": "fluent_reader",
+      "name": "Fluent Reader",
+      "install": {
+        "choco": "choco install fluent-reader",
+        "winget": "winget install Fluent Reader",
+        "scoop": "scoop install fluent-reader",
+        "apt": "sudo apt install fluent-reader -y",
+        "dnf": "sudo dnf install fluent-reader",
+        "pacman": "sudo pacman -S fluent-reader",
+        "homebrew": "brew install fluent-reader"
+      }
+    },
+    {
+      "id": "libreoffice",
+      "name": "LibreOffice",
+      "install": {
+        "choco": "choco install libreoffice",
+        "winget": "winget install LibreOffice",
+        "scoop": "scoop install libreoffice",
+        "apt": "sudo apt install libreoffice -y",
+        "dnf": "sudo dnf install libreoffice",
+        "pacman": "sudo pacman -S libreoffice",
+        "homebrew": "brew install libreoffice"
+      }
+    },
+    {
+      "id": "ulauncher",
+      "name": "Ulauncher",
+      "install": {
+        "choco": "choco install ulauncher",
+        "winget": "winget install Ulauncher",
+        "scoop": "scoop install ulauncher",
+        "apt": "sudo apt install ulauncher -y",
+        "dnf": "sudo dnf install ulauncher",
+        "pacman": "sudo pacman -S ulauncher",
+        "homebrew": "brew install ulauncher"
+      }
+    },
+    {
+      "id": "safeeyes",
+      "name": "SafeEyes",
+      "install": {
+        "choco": "choco install safeeyes",
+        "winget": "winget install SafeEyes",
+        "scoop": "scoop install safeeyes",
+        "apt": "sudo apt install safeeyes -y",
+        "dnf": "sudo dnf install safeeyes",
+        "pacman": "sudo pacman -S safeeyes",
+        "homebrew": "brew install safeeyes"
+      }
+    },
+    {
+      "id": "tipp10",
+      "name": "Tipp10",
+      "install": {
+        "choco": "choco install tipp10",
+        "winget": "winget install Tipp10",
+        "scoop": "scoop install tipp10",
+        "apt": "sudo apt install tipp10 -y",
+        "dnf": "sudo dnf install tipp10",
+        "pacman": "sudo pacman -S tipp10",
+        "homebrew": "brew install tipp10"
+      }
+    },
+    {
+      "id": "wl_clipboard",
+      "name": "wl-clipboard",
+      "install": {
+        "choco": "choco install wl-clipboard",
+        "winget": "winget install wl-clipboard",
+        "scoop": "scoop install wl-clipboard",
+        "apt": "sudo apt install wl-clipboard -y",
+        "dnf": "sudo dnf install wl-clipboard",
+        "pacman": "sudo pacman -S wl-clipboard",
+        "homebrew": "brew install wl-clipboard"
+      }
+    }
+  ]
+}

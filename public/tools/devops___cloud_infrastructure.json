@@ -1,0 +1,58 @@
+{
+  "id": "devops___cloud_infrastructure",
+  "category": "DevOps & Cloud Infrastructure",
+  "tools": [
+    {
+      "id": "kubectl",
+      "name": "Kubectl",
+      "install": {
+        "choco": "choco install kubectl",
+        "winget": "winget install Kubectl",
+        "scoop": "scoop install kubectl",
+        "apt": "sudo apt install kubectl -y",
+        "dnf": "sudo dnf install kubectl",
+        "pacman": "sudo pacman -S kubectl",
+        "homebrew": "brew install kubectl"
+      }
+    },
+    {
+      "id": "helm",
+      "name": "Helm",
+      "install": {
+        "choco": "choco install helm",
+        "winget": "winget install Helm",
+        "scoop": "scoop install helm",
+        "apt": "sudo apt install helm -y",
+        "dnf": "sudo dnf install helm",
+        "pacman": "sudo pacman -S helm",
+        "homebrew": "brew install helm"
+      }
+    },
+    {
+      "id": "terraform",
+      "name": "Terraform",
+      "install": {
+        "choco": "choco install terraform",
+        "winget": "winget install Terraform",
+        "scoop": "scoop install terraform",
+        "apt": "sudo apt install terraform -y",
+        "dnf": "sudo dnf install terraform",
+        "pacman": "sudo pacman -S terraform",
+        "homebrew": "brew install terraform"
+      }
+    },
+    {
+      "id": "aws_cli___gcloud_cli",
+      "name": "AWS CLI / GCloud CLI",
+      "install": {
+        "choco": "choco install aws-cli--gcloud-cli",
+        "winget": "winget install AWS CLI / GCloud CLI",
+        "scoop": "scoop install aws-cli--gcloud-cli",
+        "apt": "sudo apt install aws-cli--gcloud-cli -y",
+        "dnf": "sudo dnf install aws-cli--gcloud-cli",
+        "pacman": "sudo pacman -S aws-cli--gcloud-cli",
+        "homebrew": "brew install aws-cli--gcloud-cli"
+      }
+    }
+  ]
+}

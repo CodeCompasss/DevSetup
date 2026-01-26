@@ -1,0 +1,45 @@
+{
+  "id": "runtimes___sdks",
+  "category": "Runtimes & SDKs",
+  "tools": [
+    {
+      "id": "java__jdk_",
+      "name": "Java (JDK)",
+      "install": {
+        "choco": "choco install java-jdk",
+        "winget": "winget install Java (JDK)",
+        "scoop": "scoop install java-jdk",
+        "apt": "sudo apt install java-jdk -y",
+        "dnf": "sudo dnf install java-jdk",
+        "pacman": "sudo pacman -S java-jdk",
+        "homebrew": "brew install java-jdk"
+      }
+    },
+    {
+      "id": "rust__rustup_",
+      "name": "Rust (rustup)",
+      "install": {
+        "choco": "choco install rust-rustup",
+        "winget": "winget install Rust (rustup)",
+        "scoop": "scoop install rust-rustup",
+        "apt": "sudo apt install rust-rustup -y",
+        "dnf": "sudo dnf install rust-rustup",
+        "pacman": "sudo pacman -S rust-rustup",
+        "homebrew": "brew install rust-rustup"
+      }
+    },
+    {
+      "id": "php",
+      "name": "PHP",
+      "install": {
+        "choco": "choco install php",
+        "winget": "winget install PHP",
+        "scoop": "scoop install php",
+        "apt": "sudo apt install php -y",
+        "dnf": "sudo dnf install php",
+        "pacman": "sudo pacman -S php",
+        "homebrew": "brew install php"
+      }
+    }
+  ]
+}

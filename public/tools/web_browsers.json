@@ -1,0 +1,45 @@
+{
+  "id": "web_browsers",
+  "category": "Web Browsers",
+  "tools": [
+    {
+      "id": "google_chrome",
+      "name": "Google Chrome",
+      "install": {
+        "choco": "choco install google-chrome",
+        "winget": "winget install Google Chrome",
+        "scoop": "scoop install google-chrome",
+        "apt": "sudo apt install google-chrome -y",
+        "dnf": "sudo dnf install google-chrome",
+        "pacman": "sudo pacman -S google-chrome",
+        "homebrew": "brew install --cask google-chrome"
+      }
+    },
+    {
+      "id": "mozilla_firefox",
+      "name": "Mozilla Firefox",
+      "install": {
+        "choco": "choco install mozilla-firefox",
+        "winget": "winget install Mozilla Firefox",
+        "scoop": "scoop install mozilla-firefox",
+        "apt": "sudo apt install mozilla-firefox -y",
+        "dnf": "sudo dnf install mozilla-firefox",
+        "pacman": "sudo pacman -S mozilla-firefox",
+        "homebrew": "brew install --cask firefox"
+      }
+    },
+    {
+      "id": "brave_browser",
+      "name": "Brave Browser",
+      "install": {
+        "choco": "choco install brave-browser",
+        "winget": "winget install Brave Browser",
+        "scoop": "scoop install brave-browser",
+        "apt": "sudo apt install brave-browser -y",
+        "dnf": "sudo dnf install brave-browser",
+        "pacman": "sudo pacman -S brave-browser",
+        "homebrew": "brew install --cask brave-browser"
+      }
+    }
+  ]
+}
