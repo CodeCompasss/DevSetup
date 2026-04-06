@@ -271,3 +271,5 @@ DevSetup continues to evolve! Here's what we're working on:
 - **Integration**: API for CI/CD pipelines and automation tools
 
 Join our community and help shape the future of developer environment setup!
+
+we love to have you 
